@@ -1,1 +1,0 @@
-# rishad.github.io
