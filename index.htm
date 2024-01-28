@@ -152,24 +152,41 @@ hr{
   box-shadow:0px 0px 50px rgba(0,0,0,0.5);
   padding:10px;
 }
-table.skill,table.project{
-  border-collapse:collapse;
+table.skill{
   width:100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family:monospace;
+  background:black;
+  color:lightgreen;
+  border: 1px solid gray;
+  border-radius: 12px;
 }
 table.skill,table.project, table.skill td,table.project td, table.skill th,table.project th {
   border: 1px solid gray;
 }
 table.skill td, table.project td{
   padding-left:15px;
+  padding-top:7px;
+  padding-bottom:3px;
 }
 table.project td{
   padding-right:2px;
   padding-top:3px;
   padding-bottom:3px;
 }
+
+/*table.skill tr:first-child td:first-child { border-top-left-radius: 10px; }
+table.skill tr:first-child td:last-child { border-top-right-radius: 10px; }
+
+table.skill tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+table.skill tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+
+table.skill tr:first-child td { border-top-style: solid; }
+table.skill tr td:first-child { border-left-style: solid; }*/
+
 .divs-container{
-/*  height: 1084px;*/
-/*  transform:rotate(-3deg) scale(95%);*/
+  transform:rotate(-3deg) scale(95%);
 }
 </style>
 </head>
@@ -185,7 +202,7 @@ table.project td{
 
       			<br/>
       			
-      			<h4 style="margin-bottom:unset;color:#005686;font-family:'Sofia';">HISTORY ^</h4>
+      			<h4 style="margin-bottom:unset;color:#005686;font-family:'Sofia';">History ^</h4>
       			<hr/>
 
             <table style="border:none;">
@@ -196,7 +213,7 @@ table.project td{
               <tr>
                 <td style="white-space:nowrap;vertical-align:top;">2022-23</td>
                 <td style="vertical-align: top;">•</td>
-                <td>work as remote at Firmtech startup</td>
+                <td>work as remote for Firmtech startup</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap;vertical-align:top;">2021</td>
@@ -227,8 +244,8 @@ table.project td{
                 <td colspan="2"><h5 style="margin:unset">EDUCATION</h5></td>
               </tr>
               <tr>
-                <td>2016-19</td>
-                <td>•</td>
+                <td style="vertical-align: top;">2016-19</td>
+                <td style="vertical-align:top;">•</td>
                 <td>Diploma in Computer Engineering @ GPTC Meppadi</td>
               </tr>
               <tr>
@@ -252,24 +269,48 @@ table.project td{
               </tr>
             </table>
 
-            <h4 style="margin-bottom:unset;font-family:'Sofia';">SKILLS</h4>
+            <h4 style="margin-bottom:unset;font-family:'Sofia';">Skills</h4>
             <hr/>
-            <table class="skill" style="font-family:monospace;">
+            <table class="skill">
               <tr>
-                <td>code</td>
-                <td>html, css, js, php, MySql</td>
+                <td style="border-top-left-radius:10px;">code</td>
+                <td style="border-top-right-radius:10px;">html, css, js, php, MySql</td>
               </tr>
               <tr>
                 <td>frameworks</td>
                 <td>Bootsrap, Material, Ajax jQuery, CodeIgniter</td>
               </tr>
               <tr>
-                <td style="white-space:nowrap;">in learning</td>
-                <td>Git, node, react</td>
+                <td style="border-bottom-left-radius:10px;white-space:nowrap;">in-learning</td>
+                <td style="border-bottom-right-radius:10px;">Git, node, react, aws</td>
               </tr>
             </table>
 
+            <h4 style="margin-bottom:unset;font-family:'Sofia';">Repositories</h4>
             <hr/>
+            <a href="https://github.com/rishadpulikkodan" target="_blank" style="
+              display: flex;
+              margin: auto;
+              width: fit-content;
+            ">
+              <div style="
+                width:25px;
+                height:25px;
+                background-image: url('git.svg');
+                background-size: contain;
+              "></div>
+              <div style="
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                font-size:20px;
+                padding-left:10px;
+                color: black;
+                font-weight: bold;
+              ">
+                github.com/rishadpulikkodan
+              </div>
+            </a>
 
             <div style="bottom:0px;margin-right:20px;">
               <h4 style="margin-bottom:unset;text-align:center;">Declaration</h4>
@@ -278,7 +319,13 @@ table.project td{
             </div>
 
       		</div>
-
+          <img src="sign.svg" style="
+            height: 1cm;
+            position: absolute;
+            bottom: 30px;
+            right: 20px;
+            z-index: 1;
+          " />
           <div class="i" style="transform: scaleY(-1);width:13cm;position:absolute;bottom:0px;">
             <div class="ii">
               <table class="v">
@@ -352,24 +399,46 @@ table.project td{
           Wayanad,Kerala<br/>
           Pin : 673575<br/>
 
+          <a href="tel:8592897844" target="_blank">
       		<p align="center" style="font-size:25px;margin:0px;">
-      			&#128222;
-      			<a href="tel:8592897844" target="_blank"><text style="color:lightgreen;">8592897844</text></a>
+      			<img src="call.svg" style="height:27px;
+/*            filter:invert(78%) sepia(83%) saturate(333%) hue-rotate(65deg) brightness(103%) contrast(87%);*/
+            " />
+      			<text style="color:lightgreen;vertical-align:top;">8592897844</text>
       		</p>
+          </a>
+
           <p align="center" style="margin:0px;">rishadpulikkodan@gmail.com</p>
 
           <b><p align="center" style="color:#005686;margin-bottom:0px;">HOBBIES</p></b>
           
           Travel & Photography, Bike riding, music, UI Develop
 
-          <a target="_blank" href="https://www.rishad.dev/">
-            <div class="qrd" style="margin-bottom: -50px;">
-              <img class="qr" src="qr.png" />
-              <br>
-              www.rishad.dev
+          <a target="_blank" href="https://rishadpulikkodan.github.io/">
+            <div style="
+              position: absolute;
+              bottom: 10px;
+              width: 100%;
+              margin-left: -19px;
+              text-align:center;
+              font-size:11px;
+              color:black;
+            ">
+              <div style="
+                width: 3cm;
+                height: 3cm;
+                background-color: white;
+                background-image: url(qr.svg);
+                background-size: 85%;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 30px;
+                box-shadow: 0px 0px 50px rgba(0,0,0,0.5);
+                margin: auto;
+              "></div>
+              <div>rishadpulikkodan.github.io</div>
             </div>
           </a>
-
       	</div>
       </div>
     </div>
