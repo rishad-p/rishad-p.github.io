@@ -35,13 +35,13 @@ body{
     transition:500ms;
     height:10vh;
     width:100vw;
-    position:fixed;
+    /* position:fixed;
     background-color: #00000080;
     background-image:url('../img/icon.png');
     background-repeat:no-repeat;
     background-size:10%;
     background-position: 20% 50%;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); */
 }
 #tog{
     transition:500ms;
@@ -71,13 +71,13 @@ body{
 }
 #listbg{
 	transition:1s;
-	position:fixed;
+	/* position:fixed; */
 	top:10vh;
 	left:0vw;
 	width:100vw;
 	height:0vh;
-	backdrop-filter: blur(5px);
-	background-color: #00000080;
+	/* backdrop-filter: blur(5px); */
+	/* background-color: #00000080; */
 	color:transparent;
 	overflow:hidden;
 }
