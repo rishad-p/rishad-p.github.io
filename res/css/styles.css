@@ -1,0 +1,138 @@
+@media only screen and (min-width:300px) {
+/* For mobile: */
+
+}
+@media only screen and (min-width: 768px) {
+/* For desktop: */
+
+}
+body{
+    transition:500ms;
+    margin:0px;
+    user-select:none;
+    touch-action:manipulation;
+    overflow-X:hidden;
+    background-color:auto;
+    color:auto;
+    font-family:sans-serif;
+}
+#load{
+    transition:1000ms;
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background-image:url('../img/icon.png');
+    background-repeat:no-repeat;
+    background-size:50%;
+    background-position:center center;
+    background-color:black;
+    opacity:100%;
+    z-index:100;
+}
+#nav{
+    transition:500ms;
+    height:10vh;
+    width:100vw;
+    position:fixed;
+    background-color: #00000080;
+    background-image:url('../img/icon.png');
+    background-repeat:no-repeat;
+    background-size:10%;
+    background-position: 20% 50%;
+    backdrop-filter: blur(5px);
+}
+#tog{
+    transition:500ms;
+    height:10vh;
+    width:10vh;
+    position: absolute;
+    display:flex;
+    transform-origin:50% 50%;
+    transform:rotate(90deg) scale(0.75) rotateX(180deg);
+}
+.l{
+    transition:500ms;
+    width:10%;
+    height:80%;
+    background-color:yellow;
+    margin-top: 10%;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    border-radius:100px;
+}
+#fl{
+    transform-origin: 100% 100%;
+}
+#sl{
+    transform-origin:0% 100%;
+}
+#listbg{
+	transition:1s;
+	position:fixed;
+	top:10vh;
+	left:0vw;
+	width:100vw;
+	height:0vh;
+	backdrop-filter: blur(5px);
+	background-color: #00000080;
+	color:transparent;
+	overflow:hidden;
+}
+#listsbg{
+    transition:500ms;
+}
+#listsbg:hover{
+    transition:500ms;
+    padding-left:50px;
+    padding-top:20px;
+}
+.divs:hover{
+    transition:500ms !important;
+    background-color:transparent !important;
+    width: 1000px !important;
+    font-size: 60px !important;
+    margin-top: 30px !important;
+    margin-left:-30px !important;
+    margin-bottom: 30px !important;
+    border-radius:25px;
+    box-shadow:0px 0px 0px 15px #00000080;
+}
+.divs{
+    transition:500ms;
+    transform-origin:0% 50%;
+    width: 0px;
+    font-size:0px;
+    overflow:hidden;
+    background-color:transparent;
+    color:yellow;
+    border-radius:20px;
+    margin:0px;
+    background-color:#00000080;
+    box-shadow:0px 0px 0px 0px #00000080;
+}
+#ibody{
+    transition:500ms;
+    width:100vw;
+    overflow-X:hidden;
+    opacity:0%;
+}
+hr{
+    transition:500ms;
+    height: 0.1px;
+    border: none;
+    background: #80808080;
+    margin: auto 5%;
+}
+.fab,.fas{
+    transition:500ms !important;
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+}
+.fab:hover,.fas:hover{
+    transition:500ms !important;
+    color:yellow;
+}
