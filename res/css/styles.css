@@ -12,7 +12,6 @@ body{
     user-select:none;
     touch-action:manipulation;
     overflow-X:hidden;
-    background-color:auto;
     color:auto;
     font-family:sans-serif;
 }
