@@ -20,8 +20,8 @@ function ld(){
         $('#load').css('backdrop-filter','blur(5px)');
 		$("#load").css('background-size','150%');
         setTimeout(function(){
-            $("#load").css('top','-10vh');
-            $("#load").css('left','-10vw');
+            // $("#load").css('top','-10vh');
+            // $("#load").css('left','-10vw');
             // $("#load").css('border-radius','100px');
             $("#load").css('opacity','0%');
             $("#load").css('background-color','transparent');
