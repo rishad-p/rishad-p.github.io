@@ -18,13 +18,14 @@ function ld(){
     setTimeout(function(){
         $('#load').css('background-color','rgba(0,0,0,0.25)');
         $('#load').css('backdrop-filter','blur(5px)');
+		$("#load").css('background-size','150%');
         setTimeout(function(){
             $("#load").css('top','-10vh');
             $("#load").css('left','-10vw');
             // $("#load").css('border-radius','100px');
             $("#load").css('opacity','0%');
             $("#load").css('background-color','transparent');
-
+			
 			$("#prog").css('opacity','100%');
 			$.ajax("home.html").then(function(respons){
 				$("#ibody").empty();
