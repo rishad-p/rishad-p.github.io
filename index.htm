@@ -25,7 +25,7 @@
 <script type="text/javascript" src="res/js/fa.js"></script>
 </head>
 <body>
-<div id="load"></div>
+<!-- <div id="load"></div> -->
 
                 <div id="prog" style="position:fixed;top:0px;left:0px;z-index:99;transition:500ms;" role="progressbar" class="mdc-linear-progress mdc-linear-progress--indeterminate">
                     <div class="mdc-linear-progress__buffering-dots"></div>
@@ -50,14 +50,26 @@
   </div>
   <div id="listbg">
     <div id="listsbg">
-      <p class="divs a" onclick="link('home');"> &nbsp;Home</p>
-      <p class="divs b" onclick="link('cv');"> &nbsp;Resume</p>
-      <p class="divs c" onclick="link('get');"> &nbsp;Get in touch</p>
+      <p class="divs a-1" onclick="link('home');"> &nbsp;Home</p>
+      <p class="divs b-2" onclick="link('cv');"> &nbsp;Resume</p>
+      <p class="divs c-3" onclick="link('get');"> &nbsp;Get in touch</p>
     </div>
 </div>
 </div>
 <div style="height:10vh;"></div>
-<div id="ibody"><p align="center">web developer</p></div>
+<div id="ibody">
+  <div style="
+    /* background: #333;
+    padding-top: 5em; */
+    display: flex;
+    justify-content: center;
+    ">
+    <div class="typewriter">
+      <h1>i'm a Web developer. q w e r t y u i o p a s d f g h j k l z x c v b n m 
+      </h1>
+    </div>
+  </div>
+</div>
 
         <div style="
             background:black;

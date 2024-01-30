@@ -48,11 +48,11 @@ function tog(){
 		// $('#listbg').css('background-color','#000000bf');
 		$('#listbg').css('color','white');
 		// $('#listbg').css('backdrop-filter','blur(10px)');
-	    $(".a").css('transition','1500ms');
-	    $(".b").css('transition','1200ms');
-	    $(".c").css('transition','900ms');
-	    $(".d").css('transition','600ms');
-	    $(".e").css('transition','300ms');
+	    $(".a-1").css('transition','1500ms');
+	    $(".b-2").css('transition','1200ms');
+	    $(".c-3").css('transition','900ms');
+	    // $(".d").css('transition','600ms');
+	    // $(".e").css('transition','300ms');
 	    $(".divs").css('margin','30px');
 	    $(".divs").css('width','300px');
 	    $(".divs").css('font-size','50px');
@@ -74,11 +74,11 @@ function tog(){
 		// $('#listbg').css('background-color','#00000080');
 		$('#listbg').css('color','transparent');
 		// $('#listbg').css('backdrop-filter','blur(5px)');
-	    $(".a").css('transition','300ms');
-	    $(".b").css('transition','600ms');
-	    $(".c").css('transition','900ms');
-	    $(".d").css('transition','1200ms');
-	    $(".e").css('transition','1500ms');
+	    $(".a-1").css('transition','300ms');
+	    $(".b-2").css('transition','600ms');
+	    $(".c-3").css('transition','900ms');
+	    // $(".d").css('transition','1200ms');
+	    // $(".e").css('transition','1500ms');
 	    $(".divs").css('margin','0px');
 	    $(".divs").css('width','0px');
 	    $(".divs").css('font-size','0px');
@@ -89,43 +89,6 @@ function tog(){
 function link(thi){
     $("#prog").css('opacity','100%');
     $.ajax(thi+".html").then(function(respons){
-        if(thi=='home'){
-            window.location="#home";
-            $("title").html("EX Media");
-            $('#head').html("");
-            setTimeout(function(){
-		        $('#title').css('transform','rotateY(0deg)');
-		        $('#logo').css('margin-right','25px');
-		        $('#logo').css('margin-top','0px');
-		        $('#ftext').css('transform','skewY(0deg)');
-		        $('#nav').css('opacity','100%');
-            },500);
-        }
-        else if(thi=='stud'){
-            window.location="#studio";
-            $("title").html("EX Media | Studio");
-            $('#head').html("Studio&nbsp;");
-        }
-        else if(thi=='graph'){
-            window.location="#graphics"
-            $("title").html("EX Media | Graphics");
-            $('#head').html("Graphics&nbsp;");
-        }
-        else if(thi=='brand'){
-            window.location="#branding";
-            $("title").html("EX Media | Branding");
-            $('#head').html("Branding&nbsp;");
-        }
-        else if(thi=='touch'){
-            window.location="#get";
-            $("title").html("EX Media | Get in touch");
-            $('#head').html("Get in touch&nbsp;");
-        }
-        else{
-            window.location="#home";
-            $("title").html("EX Media");
-            $('#head').html("");
-        }
         $("#ibody").empty();
         $("#ibody").append(respons);
         $("#ibody").css('opacity','100%');
