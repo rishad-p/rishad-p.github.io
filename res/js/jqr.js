@@ -26,8 +26,21 @@ function ld(){
             $("#load").css('opacity','0%');
             $("#load").css('background-color','transparent');
 
-            $("#ibody").css('opacity','100%');
-            $("#prog").css('opacity','0%');
+			$("#prog").css('opacity','100%');
+			$.ajax("home.html").then(function(respons){
+				$("#ibody").empty();
+				$("#ibody").append(respons);
+				$("#ibody").css('opacity','100%');
+				$("#prog").css('opacity','0%');
+			}).fail(function(err){
+				$("#ibody").empty();
+				$("#ibody").append("<div style='height:10vh;'></div>"+JSON.stringify(err));
+				$("#ibody").css('opacity','100%');
+				$("#prog").css('opacity','0%');
+			});
+
+            // $("#ibody").css('opacity','100%');
+            // $("#prog").css('opacity','0%');
 
         },500); 
     },500);
@@ -96,7 +109,7 @@ function link(thi){
         tog();
     }).fail(function(err){
         $("#ibody").empty();
-        $("#ibody").append('<h1>'+thi+'</h1><br>'+JSON.stringify(err));
+        $("#ibody").append("<div style='height:10vh;'></div><h1>"+thi+'</h1><br>'+JSON.stringify(err));
         $("#ibody").css('opacity','100%');
         $("#prog").css('opacity','0%');
         tog();
