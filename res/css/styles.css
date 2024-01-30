@@ -23,7 +23,7 @@ body{
     left:0px;
     width:100vw;
     height:100vh;
-    background-image:url('../img/icon.png');
+    /* background-image:url('../img/icon.png'); */
     background-repeat:no-repeat;
     background-size:50%;
     background-position:center center;
@@ -137,7 +137,7 @@ hr{
   }
   .typing-demo {
     width: 330px;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate, hide-blink 0s ease-in 5s forwards;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -152,5 +152,10 @@ hr{
   @keyframes blink {
     50% {
       border-color: transparent
+    }
+  }
+  @keyframes hide-blink {
+    to {
+        border:none;
     }
   }

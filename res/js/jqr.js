@@ -19,7 +19,6 @@ function ld(){
         $('#load').css('background-color','rgba(0,0,0,0.25)');
         $('#load').css('backdrop-filter','blur(5px)');
         setTimeout(function(){
-            $('#load').hide('slow');
             $("#load").css('top','-10vh');
             $("#load").css('left','-10vw');
             // $("#load").css('border-radius','100px');
@@ -32,11 +31,13 @@ function ld(){
 				$("#ibody").append(respons);
 				$("#ibody").css('opacity','100%');
 				$("#prog").css('opacity','0%');
+				$('#load').hide('slow');
 			}).fail(function(err){
 				$("#ibody").empty();
 				$("#ibody").append("<div style='height:10vh;'></div>"+JSON.stringify(err));
 				$("#ibody").css('opacity','100%');
 				$("#prog").css('opacity','0%');
+				$('#load').hide();
 			});
 
             // $("#ibody").css('opacity','100%');
