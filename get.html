@@ -1,7 +1,7 @@
 <div style="height: 100vh;">
     scrollDown to see 
 </div>
-<div style="height: 70vh;" id="targetbg"></div>
+<div style="height: 70vh;background: gray;transition: 500ms;" id="targetbg"></div>
 <div style="
     height: 100vh;
     width: 100vw;
@@ -16,8 +16,7 @@
         font-size: 1cm;
         white-space: nowrap;
         overflow: hidden;
-        margin-left: 3cm;
-        margin-right: auto;
+        margin: auto;
         visibility: hidden;
         width: 0vw;
         transition: 500ms;
@@ -35,8 +34,9 @@ var observer = new IntersectionObserver(function(entries) {
             $("#ph").css("visibility","visible");
             $("#ph").css('opacity',str.substring(0,4));
             $("#ph").css("width",tmp+"vw");
+            $("#targetbg").css("filter","opacity("+str+") blur(10px)");
             // $("#ph").css("transform","scale("+ent+")");
-
+            // blur("+tmp+"px)
 		}
 		else {
 			$("#ph").css("visibility","hidden");
