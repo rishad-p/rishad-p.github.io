@@ -1,4 +1,47 @@
+<div style="height: 100vh;">
+    scrollDown to see 
+</div>
+<div style="height: 70vh;" id="targetbg"></div>
+<div style="
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+">
+    <div id="ph" style="
+        font-family: monospace;
+        font-size: 1cm;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-left: 3cm;
+        margin-right: auto;
+        visibility: hidden;
+        width: 0vw;
+        transition: 500ms;
+    ">PH : 8592897844</div>
+</div>
+<div style="height: 100vh;"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+var observer = new IntersectionObserver(function(entries) {
+	console.log(entries);
+	var ent = entries[0]['intersectionRatio'];
+	var str = ent.toString();
+	var tmp = str.substring(2,4);
+		if(entries[0]['isIntersecting'] === true) {
+            $("#ph").css("visibility","visible");
+            $("#ph").css('opacity',str.substring(0,4));
+            $("#ph").css("width",tmp+"vw");
+            // $("#ph").css("transform","scale("+ent+")");
 
-<div style="height:10vh;"></div><div style="height:10vh;"></div>
-<h2 align="center">404</h2>
-<p align="center">File not found</p>
+		}
+		else {
+			$("#ph").css("visibility","hidden");
+		}
+}, { threshold: [0.00, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95, 1] });
+
+observer.observe(document.querySelector("#targetbg"));
+</script>
