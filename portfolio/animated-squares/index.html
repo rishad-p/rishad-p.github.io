@@ -1,0 +1,279 @@
+<html>
+<head>
+<title>firmtech</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="black">
+<meta name="description" content="firmtech">
+<meta property="og:title" content="firmtech" />
+<meta property="og:description" content="firmtech">
+<meta property="og:image" itemprop="image" content="/img/logo.png">
+<style>
+@media (prefers-color-scheme: dark) {
+body{
+    color:white;
+    background:black;
+}
+#mt{
+    background:rgba(0,0,0,0.5);
+}
+}
+    body{
+        margin:0px;
+        user-select:none;
+        touch-action:manipulation;
+        overflow-y:hidden;
+        overflow-x:hidden;
+        font-family:sans-serif;
+    }
+    .page{
+        position:fixed;
+        width:100vw;
+        height:100vh;
+        transition:0.5s;
+        overflow-x:hidden;
+        overflow-y:auto;
+    }
+    #page1{
+        background:yellow;
+        transform:rotate(90deg);
+        transform-origin:100% 0%;
+    }
+    #page2{
+        background:red;
+        transform:rotate(90deg);
+        transform-origin:0% 0%;
+    }
+    #page3{
+        background:green;
+        transform:rotate(90deg) scale(0);
+        transform-origin:50% 50%;
+    }
+    
+    #menu{
+        transform:rotate(90deg);
+        transform-origin:0% 100%;
+        background:rgba(243,243,243,0.5);
+        /*backdrop-filter:blur(15px);
+        color:rgba(0,0,0,0.5);*/
+        overflow-y:hidden;
+    }
+    #mt{
+        position:fixed;
+        bottom:5vw;
+        right:5vw;
+        transition:5s;
+        transform:rotate(0deg);
+        width:50px;
+        height:50px;
+        border-radius:100%;
+        outline:none;
+        border:none;
+        box-shadow:0px 0px 15px gray;
+        /*background:rgba(243,243,243,0.5);*/
+        backdrop-filter:blur(50px);
+    }
+    #a{
+        margin-top:25%;
+        width:57.14%;
+    }#c{
+        width:57.14%;
+    }
+    #b{
+        width:71.42%;
+    }
+    .line{
+        background:gray;
+        border-radius:100px;
+        height:10%;
+        margin-top:10%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .mli{
+        width:70vw;
+    }
+</style>
+</head>
+<body>
+
+<div class="page" id="page1">
+    
+</div>
+
+<div class="page" id="page2">
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa11</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+    <h1>aaa</h1>
+</div>
+
+<div class="page" id="page3">
+    
+</div>
+
+<div class="page" id="menu">
+    <div class="o-header" style="position:fixed;bottom:20vh;left:20vw">
+        <h1 class="mli" onclick="home(this);">Home</h1>
+        <h1 class="mli" onclick="item1(this);">Item 1</h1>
+        <h1 class="mli" onclick="item2(this);">Item 2</h1>
+        <h1 class="mli" onclick="item3(this);">Item 3</h1>
+        <h1 class="mli" onclick="theam(this);">Dark mode</h1>
+        <h1 class="mli" onclick="openFullscreen(this);">Open fullscreen</h1>
+    </div>
+</div>
+
+<div id="mt" onclick="toggle()">
+    <div class="line" id="a"></div>
+    <div class="line" id="b"></div>
+    <div class="line" id="c"></div>
+</div>
+
+<script>
+    var menu = document.getElementById('menu');
+    var mt = document.getElementById('mt');
+
+    var a = document.getElementById('a');
+    var b = document.getElementById('b');
+    var c = document.getElementById('c');
+
+    var page1 = document.getElementById('page1');
+    var page2 = document.getElementById('page2');
+	var page3 = document.getElementById('page3');
+	
+	function toggle(){
+	    if(mt.style.transform === 'rotate(-45deg)'){
+		menu.style.transform = "rotate(90deg)";
+		menu.style.transition = '0.5s';
+		
+        a.style.width = '57.14%';
+        b.style.width = '71.42%';
+        c.style.width = '57.14%';
+		
+    mt.style.transition = '0.5s';
+    mt.style.transform = 'rotate(0deg)';
+		
+	    }
+	    else
+	    {
+		menu.style.transform = "rotate(0deg)";
+		menu.style.transition = '1s';
+		
+        a.style.transition = '0.5s';
+        b.style.transition = '0.5s';
+        c.style.transition = '0.5s';
+
+        a.style.width = '10%';
+        b.style.width = '50%';
+        c.style.width = '10%';
+		
+        mt.style.transition = '0.5s';
+        mt.style.transform = 'rotate(-45deg)';
+
+	    }
+	}
+	
+	function item1(){
+		page1.style.transform = "rotate(0deg)";
+		page1.style.transition = '1s';
+        toggle();
+        page2.style.transform = "rotate(90deg)";
+        page3.style.transform = "rotate(90deg) scale(0)";
+	}
+	
+	function item2(){
+		page2.style.transform = "rotate(0deg)";
+		page2.style.transition = '1s';
+        toggle();
+        page1.style.transform = "rotate(90deg)";
+        page3.style.transform = "rotate(90deg) scale(0)";
+	}
+	
+	function item3(){
+		page3.style.transform = "rotate(0deg) scale(1)";
+		page3.style.transition = '1s';
+        toggle();
+        page1.style.transform = "rotate(90deg)";
+	    page2.style.transform = "rotate(90deg)";
+	}
+	function home(){
+        toggle();
+        page1.style.transform = "rotate(90deg)";
+	    page2.style.transform = "rotate(90deg)";
+        page3.style.transform = "rotate(90deg) scale(0)";
+	}
+</script>
+<script>
+    var body = document.getElementsByTagName('body')[0];
+    function theam(thi){
+        if(body.style.background === 'black'){
+            body.style.transition = '0.5s';
+            body.style.background = "white";
+            menu.style.background = "rgba(243,243,243,0.5)";
+            mt.style.background = "rgba(243,243,243,0.5)";
+            body.style.color = "black";
+            thi.innerHTML = "Dark mode";
+        }
+        else {
+            body.style.transition = '0.5s';
+            body.style.background = "black";
+            body.style.color = "white";
+            menu.style.background = "rgba(0,0,0,0.5)";
+            mt.style.background = "rgba(0,0,0,0.5)";
+
+            thi.innerHTML = "Light mode";
+        }
+    }
+</script>
+<script>
+var elem = document.documentElement;
+function openFullscreen(thi) {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+  
+  thi.setAttribute("onclick", "closeFullscreen(this)");
+  thi.innerHTML = "Close fullscreen";
+}
+
+function closeFullscreen(thi) {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  }
+  thi.setAttribute("onclick", "openFullscreen(this)");
+  thi.innerHTML = "Open fullscreen";
+}
+</script>
+</body>
+</html>

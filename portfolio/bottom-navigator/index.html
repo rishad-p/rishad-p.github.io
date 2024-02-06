@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cart</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css">
+		body{
+			margin:0px;
+		}
+		iframe{
+			border:none;
+			width:100vw;
+			height:90vh;
+		}
+		div{
+			width:100%;
+			height:9vh;
+			overflow: hidden;
+			position:fixed;
+			bottom:0px;
+			border-top: 0.2px solid #80808080;
+		}
+		button{
+			width: 24%;
+		    height: 100%;
+		    border: none;
+		    outline: none;
+		    background:none;
+		}
+		button:hover{
+			transition:0.5s;
+			color:lightblue;
+		}
+		.t{
+			font-size: 10px;
+		}
+	</style>
+</style>
+
+  <style type="text/css">
+    @keyframes rainbow { 
+  0% { background-position: 0% 100%; }
+  50% { background-position: 100% 200%; }
+  100% {background-position: 0% 100%; }
+}
+    #rainbow-progress-bar {
+      display: none;
+      position: fixed;
+      left:0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background:linear-gradient(124deg, #ec00ff, #fde5ff, #ff8d00, #f9ff00, #1de840, #1ddde8, #1200ff, #dd00f3, #f9b9ff);
+      background-size: 900% 900%;
+      animation: rainbow 9s ease infinite;
+      height: 5px;
+      z-index:6;
+    }
+  </style>
+</head>
+<body>
+	<div id="rainbow-progress-bar"></div>
+	<iframe id="frame" src="home.htm"></iframe>
+	<div class="bott">
+		<button onclick="
+				window.location = '#';
+				document.getElementById('rainbow-progress-bar').style.display = 'block';
+				document.getElementById('frame').src = 'home.htm';
+			">
+			<text class="glyphicon">&#xe021;</text>
+			<br>
+			<text class="t">Home</text>
+		</button>
+		<button onclick="
+				window.location = '#';
+				document.getElementById('rainbow-progress-bar').style.display = 'block';
+				document.getElementById('frame').src = 'categorys.htm';
+			">
+			<text class="glyphicon">&#xe010;</text>
+			<br>
+			<text class="t">Categories</text>
+		</button>
+		<button onclick="
+				window.location = '#';
+				document.getElementById('rainbow-progress-bar').style.display = 'block';
+				document.getElementById('frame').src = 'cart.htm';
+			">
+			<text class="glyphicon">&#xe116;</text>
+			<br>
+			<text class="t">Cart</text>
+		</button>
+		<button onclick="
+				window.location = '#';
+				document.getElementById('rainbow-progress-bar').style.display = 'block';
+				document.getElementById('frame').src = 'orders.htm';
+			">
+			<text class="glyphicon">&#xe012;</text>
+			<br>
+			<text class="t">Orders</text>
+		</button>
+	</div>
+<script type="text/javascript">
+let progressBar = document.querySelector("#rainbow-progress-bar");
+window.onload = function() {
+  progressBar.style.display = 'none';
+};
+document.getElementById('frame').onload = function() {
+  progressBar.style.display = 'none';
+};
+</script>
+</body>
+</html>

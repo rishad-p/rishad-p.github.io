@@ -1,0 +1,159 @@
+<html><head>
+    <title>Circle ui</title>
+    <meta name="theme-color" content="lightblue">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="res/css/flutter.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body onload="setTimeout(function(){load();},1000);">
+<!--<div id="prog"></div>-->
+<button id="cir" onclick="tog();" data="off" class="material-icons" style="
+    position:fixed;
+    transition:1000ms;
+    transform-origin:50% 50%;
+    z-index:99;
+    width:60px;
+    height:60px;
+    right:10px;
+    bottom:10px;
+    color:transparent;
+    font-size:0px;
+    border-radius:100%;
+    background:white;
+    box-shadow:0px 0px 0px 200vw white;
+    border:0px;
+    outline:none;
+">&#xe5d2;</button>
+<div id="list" style="
+    transition:500ms;
+    position:fixed;
+    z-index:100;
+    bottom:100px;
+    margin-left:25vw;
+    color:black;
+    opacity:0%;
+    display:none;
+">
+    <h1 class="a">home</h1>
+    <h1 class="b">b</h1>
+    <h1 class="c">c</h1>
+    <h1 class="d">d</h1>
+    <h1 class="e">e</h1>
+</div>
+    <div id="ibody" style="padding-bottom:15vh;">
+
+<div style="padding:10px;">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+
+
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+</div>
+
+    </div>
+
+<script>
+$("h1").click(function(){
+    tog();
+});
+function load(){
+    $("#cir").css("box-shadow","0px 0px 0px 0vw white");
+    setTimeout(function(){
+        $("#cir").css("color","black");
+        $("#cir").css("font-size","30px");
+    },1000);
+}
+function tog(){
+    if($("#cir").attr("data")=="off"){
+    $("#cir").css("transition","500ms");
+        $("#cir").attr("data","on");
+        $("#cir").css("box-shadow","0px 0px 0px 200vw white");
+        $("#cir").css("color","lightgray");
+        $("#cir").css("font-size","20px");
+        
+        $("#loadbg").css("transition","500ms");
+        $("#menu").css("opacity","50%");
+        
+	    $("h1").css('margin-left','0px');
+        
+        $("#list").css("display","block");
+        setTimeout(function(){
+            $("#list").css("opacity","100%");
+        },500);
+    }
+    else if($("#cir").attr("data")=="on"){
+        $("#cir").attr("data","off");
+        $("#cir").css("box-shadow","0px 0px 0px 0vw white");
+        $("#cir").css("color","black");
+        
+        $("#cir").css("font-size","30px");
+        
+        $("#loadbg").css("transform","rotate(90deg)");
+        $("#loadbg").css("transition","1000ms");
+        $("#menu").css("opacity","100%");
+
+	    $("h1").css('margin-left','500px');
+
+	    $(".a").css('transition','1500ms');
+	    $(".b").css('transition','1200ms');
+	    $(".c").css('transition','900ms');
+	    $(".d").css('transition','600ms');
+	    $(".e").css('transition','300ms');
+	    
+        $("#list").css("opacity","0%");
+        setTimeout(function(){
+            $("#list").css("display","none");
+        },100);
+    }
+}
+</script>
+</body>
+</html>

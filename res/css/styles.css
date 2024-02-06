@@ -28,7 +28,7 @@ body{
     background-position:center center;
     background-color:black;
     opacity:100%;
-    z-index:100;
+    z-index:99;
 }
 #nav{
     transition:500ms;
@@ -118,6 +118,9 @@ body{
     overflow-X:hidden;
     opacity:0%;
 }
+a{
+    text-decoration: none;
+}
 hr{
     transition:500ms;
     height: 0.1px;
@@ -160,3 +163,4 @@ hr{
         border:none;
     }
   }
+

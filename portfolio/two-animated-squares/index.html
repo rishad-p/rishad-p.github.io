@@ -1,0 +1,194 @@
+<html translate="no"><head>
+    <title>flutter ui</title>
+    <meta name="google" content="notranslate">
+    <meta name="theme-color" content="lightblue">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="res/css/flutter.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head><body onload="setTimeout(function(){load();},1000);">
+<!--<div id="prog"></div>-->
+<div id="load" data="off" style="
+    z-index:100;
+    transition:2000ms;
+    margin-top:0vh;
+    position:fixed;
+    bottom:0;
+    width:100vw;
+    height:100vh;
+    transform-origin:0% 100%;
+    transform:rotate(0deg);
+    background:white;
+">
+    <button id="menu" onclick="tog();" class="material-icons" style="
+        transition:500ms;
+        opacity:0%;
+        font-size:50px;
+        position:fixed;
+        height:14.142vh;
+        width:7.07vh;
+        bottom:0;
+        background:transparent;
+        border:0px;
+        outline:none;
+    ">
+        &#xe945;
+    </button>
+    <div id="items" style="
+        transition:500ms;
+        padding-left:10vh;
+        opacity:0;
+        position:fixed;
+        bottom:10vh;
+        color:black;
+    ">
+        <h1 class="a">home</h1>
+        <h1 class="b">Item1</h1>
+        <h1 class="c">item2</h1>
+        <h1 class="d">item 3</h1>
+        <h1 class="e">Item 4</h1>
+    </div>
+</div>
+<div id="loadbg" onclick="tog();" style="
+    z-index:99;
+    transition:3000ms;
+    margin-top:0vh;
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    transform-origin:0% 100%;
+    transform:rotate(-10deg);
+    opacity:75%;
+    background:lightgray;
+"></div>
+<div>
+    <div id="ibody" style="padding-bottom:15vh;">
+
+<div style="padding:10px;">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+
+
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.</p>
+</div>
+
+    </div>
+</div>
+<script>
+$("h1").click(function(){
+    tog();
+});
+function load(){
+    $("#menu").css("opacity","70%");
+    setTimeout(function(){
+        $("#items").css("opacity","100%");
+    setTimeout(function(){
+        $("#load").attr("data","off");
+        $("#load").css("bottom","10vh");
+        $("#load").css("height","70vh");
+        $("#load").css("background","rgba(211,211,211,0.90)");
+        $("#load").css("transform","rotate(135deg)");
+        $("#loadbg").css("transform","rotate(90deg)");
+        $("#loadbg").css("background","gray");
+        $("#menu").css("font-size","40px");
+        
+	    $("h1").css('margin-left','500px');
+
+	    $(".a").css('transition','1500ms');
+	    $(".b").css('transition','1200ms');
+	    $(".c").css('transition','900ms');
+	    $(".d").css('transition','600ms');
+	    $(".e").css('transition','300ms');
+    },500);
+    },500);
+}
+function tog(){
+    if($("#load").attr("data")=="off"){
+        $("#load").attr("data","on");
+        $("#load").css("bottom","0vh");
+        $("#load").css("transition","1000ms");
+        $("#load").css("transform","rotate(0deg)");
+        $("#loadbg").css("transform","rotate(-10deg)");
+        $("#loadbg").css("transition","500ms");
+        $("#menu").css("opacity","50%");
+        $("#menu").css("font-size","50px");
+        
+	    $("h1").css('margin-left','0px');
+        
+	    $(".a").css('transition','1500ms');
+	    $(".b").css('transition','1200ms');
+	    $(".c").css('transition','900ms');
+	    $(".d").css('transition','600ms');
+	    $(".e").css('transition','300ms');
+
+    }
+    else if($("#load").attr("data")=="on"){
+        $("#load").attr("data","off");
+        $("#load").css("bottom","10vh");
+        $("#load").css("transition","500ms");
+        $("#load").css("transform","rotate(135deg)");
+        $("#loadbg").css("transform","rotate(90deg)");
+        $("#loadbg").css("transition","1000ms");
+        $("#menu").css("opacity","100%");
+        $("#menu").css("font-size","40px");
+
+	    $("h1").css('margin-left','500px');
+
+	    $(".a").css('transition','1500ms');
+	    $(".b").css('transition','1200ms');
+	    $(".c").css('transition','900ms');
+	    $(".d").css('transition','600ms');
+	    $(".e").css('transition','300ms');
+
+    }
+}
+</script>
+</body>
+</html>
