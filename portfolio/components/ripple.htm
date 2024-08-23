@@ -1,9 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://rishad-p.github.io/portfolio/material/res/css/material.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="importmap">
             {
               "imports": {
@@ -14,13 +16,40 @@
         <script type="module">
             import '@material/web/all.js';
             import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
-            
             document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
         </script>
     </head>
-    <body>
+    <body style="opacity: 0%;transition: 500ms;" onload="load()">
+        <div id="prog" role="progressbar" class="mdc-linear-progress mdc-linear-progress--indeterminate" style="transition: all 500ms ease 0s;width: 0vw;">
+            <div class="mdc-linear-progress__buffering-dots"></div>
+            <div class="mdc-linear-progress__buffer"></div>
+            <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+                <span class="mdc-linear-progress__bar-inner"></span>
+            </div>
+            <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+                <span class="mdc-linear-progress__bar-inner"></span>
+            </div>
+        </div>
+        <br>
+        <br>
+<button class="mdc-button mdc-button--unelevated">  <span class="mdc-button__ripple"></span> Learn More</button>
+        <br>
+        <br>
+
+<Button
+  unelevated
+  >
+  Learn More
+</Button>
+        <br>
+        <br>
         <h1 class="md-typescale-display-medium">Hello Material!</h1>
-        <form>
+        <form style="
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        ">
             <p class="md-typescale-body-medium">Check out these controls in a form!</p>
             <md-checkbox></md-checkbox>
             <div>
@@ -33,7 +62,7 @@
         </form>
         <br/>
         <br/>
-        <label>
+        <label class="md-typescale-display-small">
             Material 3
             <md-checkbox checked></md-checkbox>
         </label>
@@ -56,12 +85,8 @@
         </md-outlined-text-field>
         <br>
         <br>
-        <style>
-            .container {
-              position: relative;
-            }
-          </style>
           <div class="container" style="
+            position: relative;
             width: 300px;
             height: 300px;
             box-shadow: 0px 0px 0.5px 0.5px #80808040;
@@ -72,20 +97,18 @@
             <h1 class="md-typescale-display-medium">Ripple</h1>
             <h1>&nbsp;</h1>
           </div>
-          <script>
+        <br>
+        <br>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7xb6TOtfh6pJHHIStdWwGp?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <br>
+        <br>
+        <script>
             const ripple = document.querySelector('#ripple');
             const control = document.querySelector('#ripple-control');
             ripple.attach(control);
-          </script>
-        <br>
-        <br>
-        <style>
-            form {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 16px;
+            function load() {
+                $("body").css("opacity", "100%")
             }
-        </style>
+        </script>
     </body>
 </html>
