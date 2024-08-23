@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Design Outlined Button with Icon</title>
+    <!-- Material Design Web CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/button@14.0.0/dist/mdc.button.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <!-- Button with Ripple Effect, Icon, and Outline -->
+    <button class="mdc-button mdc-button--outlined mdc-button--icon-leading">
+        <span class="mdc-button__ripple"></span>
+        <span class="mdc-button__focus-ring"></span>
+        <i class="material-icons mdc-button__icon" aria-hidden="true">bookmark</i>
+        <span class="mdc-button__label">Outlined Button plus Icon</span>
+    </button>
+
+    <!-- Material Design Web JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@material/ripple@14.0.0/dist/mdc.ripple.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@material/button@14.0.0/dist/mdc.button.min.js"></script>
+    <script>
+        // Initialize the ripple effect on the button
+        const buttons = document.querySelectorAll('.mdc-button');
+        buttons.forEach(button => {
+            mdc.ripple.MDCRipple.attachTo(button);
+        });
+    </script>
+</body>
+</html>
