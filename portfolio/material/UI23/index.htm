@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>firmtech</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="black">
+<meta name="description" content="firmtech">
+<meta property="og:title" content="firmtech" />
+<meta property="og:description" content="firmtech">
+<meta property="og:image" itemprop="image" content="/img/logo.png">
+<style>
+@media (prefers-color-scheme: dark) {
+body{
+    color:white;
+    background:black;
+}
+#mt{
+    background:rgba(0,0,0,0.5);
+}
+}
+    body{
+        margin:0px;
+        user-select:none;
+        touch-action:manipulation;
+        /*overflow-y:hidden;*/
+        overflow-x:hidden;
+        font-family:sans-serif;
+    }
+    #btn{
+        margin:3px;
+        box-shadow:0px 0px 0px 1px gray;
+        border-radius:100%;
+        background-color:transparent;
+        height:100vw;
+        
+        overflow:hidden;
+        position:relative;
+    }
+    #rip{
+        /*top:100px;
+        left:50px;*/
+        height:10px;
+        width:10px;
+        border-radius:100%;
+        background:rgba(255,255,255,0.1);
+        transform-origin:center center;
+        position:absolute;
+        transform:scale(0);
+
+    }
+</style>
+</head>
+<body>
+<br>
+<div id="btn" ontouchstart="rip(event)">
+    <div id="rip">
+    </div>
+</div>
+
+<script>
+    function rip(event){
+        var x = event.touches[0].clientX;
+        var y = event.touches[0].clientY;
+        var rip = document.getElementById('rip');
+        var btn = document.getElementById('btn');
+        
+        rip.style.top = y+'px';
+        rip.style.left = x+'px';
+        rip.style.background = 'rgba(255,255,255,0.1)';
+        rip.style.transform = 'scale(0)';
+        setTimeout(function(){
+            rip.style.transform = 'scale(150)';
+            rip.style.transition = '1000ms';
+            
+            setTimeout(function(){
+                rip.style.background = 'transparent';
+                rip.style.transition = '1ms';
+            },1000);
+        },1);
+    }
+    function ripend(){
+        var rip = document.getElementById('rip');
+        rip.style.transform = 'scale(0)';
+        rip.style.transition = '0ms';
+        setTimeout(function(){
+            rip.style.transition = '1ms';
+        },500);
+    }
+    function get(){
+        setTimeout(()=>{
+        var btn1 = document.getElementById('btn');
+        var btn2 = document.getElementById('btn2');
+        var s1 = btn1.clientHeight;
+        var s2 = btn2.clientHeight;
+        btn2.style.height = s1+s2;
+        },1000);
+    }
+</script>
+<script>
+    var body = document.getElementsByTagName('body')[0];
+    function theam(thi){
+        if(body.style.background === 'black'){
+            body.style.transition = '0.5s';
+            body.style.background = "white";
+            menu.style.background = "rgba(243,243,243,0.5)";
+            mt.style.background = "rgba(243,243,243,0.5)";
+            body.style.color = "black";
+            thi.innerHTML = "Dark mode";
+        }
+        else {
+            body.style.transition = '0.5s';
+            body.style.background = "black";
+            body.style.color = "white";
+            menu.style.background = "rgba(0,0,0,0.5)";
+            mt.style.background = "rgba(0,0,0,0.5)";
+
+            thi.innerHTML = "Light mode";
+        }
+    }
+</script>
+</body>
+</html>

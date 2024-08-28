@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="icon" sizes="192x192" href="https://rishad.dev/apps/ec/res/img/favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <link rel="stylesheet" href="res/css/styles.css">
     <link rel="stylesheet" href="res/css/material.css">
     
@@ -47,7 +48,7 @@
                 <i class="mdc-list-item__graphic material-icons">&#xe871;</i>
                 Dashboard
             </li>
-            <li data="star" class="mdc-list-item mdc-ripple">
+            <li data="star" class="mdc-list-item mdc-ripple-upgraded">
                 <span class="mdc-list-item__graphic material-icons">star</span>
                 Star
             </li>
@@ -148,5 +149,15 @@
             </div>
 </div>
     <script src="res/js/jsb.js"></script>
+
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script>
+        // Initialize the ripple effect on all list items
+        const listItems = document.querySelectorAll('.mdc-list-item');
+        listItems.forEach(item => {
+            mdc.ripple.MDCRipple.attachTo(item);
+        });
+    </script>
+
 </body>
 </html>
