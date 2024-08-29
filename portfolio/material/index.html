@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="res/css/styles.css">
     <link rel="stylesheet" href="res/css/material.css">
     
-    <link rel="manifest" href="res/js/manifest.json">
+    <!-- <link rel="manifest" href="res/js/manifest.json"> -->
     <script src="res/js/drawer.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
@@ -24,10 +24,18 @@
             <span class="mdc-linear-progress__bar-inner"></span>
         </div>
     </div>
-
 </div>
 <div id="root" class="drawer-frame-root">
-
+<div id="menu-scrim" ></div>
+<div class="mdc-menu-surface" id="menu-list" tabindex="-1">
+    <ul class="mdc-list" role="menu" aria-hidden="true">
+        <li class="mdc-list-item mdc-ripple-upgraded" role="menuitem" tabindex="0">Passionfruit</li>
+        <li class="mdc-list-item mdc-ripple-upgraded" role="menuitem" tabindex="-1">Orange</li>
+        <li class="mdc-list-divider" role="separator"></li>
+        <li class="mdc-list-item mdc-ripple-upgraded" role="menuitem" tabindex="-1">Pineapple</li>
+        <li class="mdc-list-item mdc-ripple-upgraded" role="menuitem" tabindex="-1">Mango</li>
+    </ul>
+</div>
 <aside id="drawerEl">
     <div class="mdc-drawer__header" style="position:fixed;top:0px;background:white !important;">
         <h3 class="mdc-drawer__title">Draw</h3>
@@ -47,7 +55,7 @@
                 <i class="mdc-list-item__graphic material-icons">&#xe871;</i>
                 Dashboard
             </li>
-            <li data="star" class="mdc-list-item mdc-ripple">
+            <li data="star" class="mdc-list-item mdc-ripple-upgraded">
                 <span class="mdc-list-item__graphic material-icons">star</span>
                 Star
             </li>
@@ -119,8 +127,11 @@
                 <button id="screen" data="off" class="mdc-icon-button material-icons mdc-top-app-bar__action-item mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" style="--mdc-ripple-fg-size:28px; --mdc-ripple-fg-scale:1.71429; --mdc-ripple-left:10px; --mdc-ripple-top:10px;">
                     &#xe5d0;
                 </button>
-                <button id="more" data="off" class="mdc-icon-button material-icons mdc-top-app-bar__action-item mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" style="--mdc-ripple-fg-size:28px; --mdc-ripple-fg-scale:1.71429; --mdc-ripple-left:10px; --mdc-ripple-top:10px;transform-origin:50% 50%;transition:300ms;">
+                <button id="more_horiz" data="off" class="mdc-icon-button material-icons mdc-top-app-bar__action-item mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" style="--mdc-ripple-fg-size:28px; --mdc-ripple-fg-scale:1.71429; --mdc-ripple-left:10px; --mdc-ripple-top:10px;transform-origin:50% 50%;transition:300ms;display: none;">
                     &#xe5d3;
+                </button>
+                <button id="more-vert-btn" data="off" class="mdc-icon-button material-icons mdc-top-app-bar__action-item mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" style="--mdc-ripple-fg-size:28px; --mdc-ripple-fg-scale:1.71429; --mdc-ripple-left:10px; --mdc-ripple-top:10px;transform-origin:50% 50%;transition:300ms;">
+                    &#xe5d4;
                 </button>
             </section>
         </div>
@@ -136,17 +147,26 @@
         </div>
     </header>
     <div class="mdc-top-app-bar--fixed-adjust"></div>
-                <div class="drawer-main-content" style="transition:500ms;opacity:0%;">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                    anim id est laborum.</p>
-                </div>
-            </div>
+        <div class="drawer-main-content" style="transition:500ms;opacity:0%;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+        </div>
 </div>
-    <script src="res/js/jsb.js"></script>
+</div>
+    <script src="res/js/scripts.js"></script>
+
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script>
+        // Initialize the ripple effect on all list items
+        const listItems = document.querySelectorAll('.mdc-list-item');
+        listItems.forEach(item => {
+            mdc.ripple.MDCRipple.attachTo(item);
+        });
+    </script>
 </body>
 </html>

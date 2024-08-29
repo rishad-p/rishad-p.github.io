@@ -14,6 +14,28 @@ body{
     overflow-X:hidden;
     font-family:sans-serif;
 }
+#menu-scrim{
+    position: fixed;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    background: #00000026;
+    opacity: 0%;
+    transform: translateX(100vw) translateY(-100vh);
+    transition: 300ms;
+}
+#menu-list{
+    transform-origin: center bottom !important;
+    position: fixed !important;
+    right: 15px !important;
+    top: 35px !important;
+    max-height: 470.438px !important;
+    display: block !important;
+    opacity: 100% !important;
+    transition: 300ms !important;
+    width: 0px;
+    height: 0px;
+}
 .hy-drawer-scrim{
     /* shadow */
     display:block;

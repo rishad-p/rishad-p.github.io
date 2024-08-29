@@ -1,19 +1,18 @@
-document.addEventListener("contextmenu",function(e){e.preventDefault();},false);document.addEventListener("keydown",function(e){if(e.ctrlKey&&e.shiftKey&&e.keyCode==73){disabledEvent(e);}if(e.ctrlKey&&e.shiftKey&&e.keyCode==74){disabledEvent(e);}if(e.keyCode==83&&(navigator.platform.match("Mac")?e.metaKey:e.ctrlKey)){disabledEvent(e);}if(e.ctrlKey&&e.keyCode==85){disabledEvent(e);}if(event.keyCode==123){disabledEvent(e);}},false);function disabledEvent(e){if(e.stopPropagation){e.stopPropagation();}else if(window.event){window.event.cancelBubble=true;}e.preventDefault();return false;}
 
-      var Drawer = hyDrawer.Drawer;
-      var ua = navigator.userAgent.toLowerCase();
-      var isSafari = ua.indexOf('safari') > 0 && ua.indexOf('chrome') < 0;
-      var isMobileSafari = isSafari && ua.indexOf('mobile') > 0;
-      window.drawer = new Drawer(window.drawerEl, {
-        range: isMobileSafari ? [35, 150] : [0, 150],
-        threshold: isSafari ? 0 : 10,
-        preventDefault: true,
-        mouseEvents: true,
-      });
-      window.menuEl.addEventListener('click', function (e) {
-        e.preventDefault();
-        window.drawer.toggle();
-      });
+var Drawer = hyDrawer.Drawer;
+var ua = navigator.userAgent.toLowerCase();
+var isSafari = ua.indexOf('safari') > 0 && ua.indexOf('chrome') < 0;
+var isMobileSafari = isSafari && ua.indexOf('mobile') > 0;
+window.drawer = new Drawer(window.drawerEl, {
+    range: isMobileSafari ? [35, 150] : [0, 150],
+    threshold: isSafari ? 0 : 10,
+    preventDefault: true,
+    mouseEvents: true,
+});
+window.menuEl.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.drawer.toggle();
+});
       
 function load(){
     $('#prog').css('transition','500ms');
@@ -59,7 +58,6 @@ function load(){
         $("title").html("Material | "+thi);
         $('#title').html(thi);
     });
-    
 }
 
 $('li').click(function(){
@@ -103,13 +101,13 @@ $('li').click(function(){
 
 $('#logout').hide();
 $('#screen').hide();
-$('#more').click(function(){
+$('#more_horiz').click(function(){
     if($(this).attr('data')=='off'){
         $(this).attr('data','on');
         $(this).css('transform','scale(0)');
         setTimeout(function(){
-            $('#more').html('&#xe14c;');
-            $('#more').css('transform','scale(1)');
+            $('#more_horiz').html('&#xe14c;');
+            $('#more_horiz').css('transform','scale(1)');
         },300);
         $('#logout').show('slow');
         $('#screen').show('slow');
@@ -118,13 +116,45 @@ $('#more').click(function(){
         $(this).attr('data','off');
         $(this).css('transform','scale(0)');
         setTimeout(function(){
-            $('#more').html('&#xe5d3;');
-            $('#more').css('transform','scale(1)');
+            $('#more_horiz').html('&#xe5d3;');
+            $('#more_horiz').css('transform','scale(1)');
         },300);
         $('#logout').hide('slow');
         $('#screen').hide('slow');
     }
 });
+$("#more-vert-btn").click(() =>{
+    $("#menu-scrim").css("transition", "0ms");
+    $("#menu-scrim").css("transform", "translateX(0vw) translateY(0vh)");
+    setTimeout(() =>{
+        $("#menu-scrim").css("transition", "300ms");
+        $("#menu-scrim").css("opacity", "100%");
+    }, 10);
+    $("#menu-list").css("width", "120px");
+    $("#menu-list").css("height", "209px");
+});
+$("#menu-scrim").click(() =>{
+    $("#menu-scrim").css("transition", "300ms");
+    $("#menu-scrim").css("opacity", "0%");
+    setTimeout(() =>{
+        $("#menu-scrim").css("transition", "300ms");
+        $("#menu-scrim").css("transform", "translateX(100vw) translateY(-100vh)");
+    }, 300);
+    $("#menu-list").css("width", "0px");
+    $("#menu-list").css("height", "0px");
+});
+
+$("#menu-scrim").on("touchstart", () =>{
+    $("#menu-scrim").css("transition", "300ms");
+    $("#menu-scrim").css("opacity", "0%");
+    setTimeout(() =>{
+        $("#menu-scrim").css("transition", "300ms");
+        $("#menu-scrim").css("transform", "translateX(100vw) translateY(-100vh)");
+    }, 300);
+    $("#menu-list").css("width", "0px");
+    $("#menu-list").css("height", "0px");
+});
+
 $('#screen').click(function(){
     var elem = document.documentElement;
     if($(this).attr('data')=='off'){
