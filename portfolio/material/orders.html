@@ -43,24 +43,24 @@
 "></div>
 
 <div id="data_add_window">
-<!-- 	<button onclick="close_data_add_window();" class="mdc-icon-button">
-	  <div class="mdc-icon-button__ripple"></div>
-	  <span class="mdc-icon-button__focus-ring"></span>
-	  <i class="material-icons">arrow_back_ios</i>
-	</button> -->
-	<button onclick="close_data_add_window();" class="mdc-icon-button" style="
-		right: 0px;
-		position: absolute;
-	">
-	  <div class="mdc-icon-button__ripple"></div>
-	  <span class="mdc-icon-button__focus-ring"></span>
-	  <i class="material-icons">close</i>
-	</button>
+    <div class="mdc-top-app-bar__row">
+        <section id="mdc-top-app-bar__section--align-start-add-data" style="transition: 500ms;">
+			<button onclick="open_data_add_window();" id="add-data-btn" class="mdc-fab">
+			  <div class="mdc-icon-button__ripple"></div>
+			  <span class="mdc-icon-button__focus-ring"></span>
+			  <i class="material-icons" id="add-back-icon">add</i>
+			</button>
+            <span id="title" class="mdc-top-app-bar__title" style="text-transform: capitalize;">Create data</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+			<button onclick="close_data_add_window();" id="close-add-data-btn" class="mdc-icon-button">
+			  <div class="mdc-icon-button__ripple"></div>
+			  <span class="mdc-icon-button__focus-ring"></span>
+			  <i class="material-icons" id="add-back-icon">close</i>
+			</button>
+        </section>
+    </div>
 
-	<button class="mdc-fab" id="add-data-btn" aria-label="Favorite" onclick="open_data_add_window();">
-	  <div class="mdc-fab__ripple"></div>
-	  <span class="mdc-fab__icon material-icons">add</span>
-	</button>
 </div>
 
 
@@ -70,21 +70,23 @@
 	color: white;
 }
 #data_add_window{
-	transition: 200ms;
+	transition: 500ms;
 	position: fixed;
 	z-index: 5;
 	width: 56px;
 	height: 56px;
-	bottom: 15px;
-	right: 15px;
-	border-radius: 100%;
+	top: 100vh;
+	left: 100vw;
+    margin-left: -71px;
+    margin-top: -71px;
+	border-radius: 100px;
 	overflow: hidden;
 	background: white;
+	box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
 }
 #add-data-btn{
-	transition: 200ms;
-	position: fixed;
-	bottom: 15px;
-	right: 15px;
+	transition: 500ms;
+    box-shadow: none;
+    flex: none;
 }
 </style>
