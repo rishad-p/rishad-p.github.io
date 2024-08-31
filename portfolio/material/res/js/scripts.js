@@ -143,6 +143,34 @@ $("#menu-scrim").on("touchstart", () =>{
     $("#menu-list").css("height", "0px");
 });
 
+function open_data_add_window(){
+    $("#data_add_window").css("bottom", "0px");
+    $("#data_add_window").css("right", "0px");
+    $("#data_add_window").css("height", "100vh");
+    $("#data_add_window").css("width", "100vw");
+    $("#data_add_window").css("border-radius", "0%");
+
+    $("#add-data-btn").css("top", "0px");
+    $("#add-data-btn").css("left", "0px");
+    $("#add-data-btn").css("bottom", "unset");
+    $("#add-data-btn").css("right", "unset");
+    $("#add-data-btn").attr("class", "mdc-icon-button");
+}
+
+function close_data_add_window(){
+    $("#data_add_window").css("height", "56px");
+    $("#data_add_window").css("width", "56px");
+    $("#data_add_window").css("border-radius", "100%");
+    $("#data_add_window").css("bottom", "15px");
+    $("#data_add_window").css("right", "15px");
+
+    $("#add-data-btn").css("top", "unset");
+    $("#add-data-btn").css("left", "unset");
+    $("#add-data-btn").css("bottom", "15px");
+    $("#add-data-btn").css("right", "15px");
+    $("#add-data-btn").attr("class", "mdc-fab");
+}
+
 $('#screen').click(function(){
     var elem = document.documentElement;
     if($(this).attr('data')=='off'){

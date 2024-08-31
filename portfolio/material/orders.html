@@ -41,21 +41,50 @@
 <div data="fab-impact-fixer" style="
 	height: 100px;
 "></div>
-<button class="mdc-fab" aria-label="Favorite" style="
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-">
-  <div class="mdc-fab__ripple"></div>
-  <span class="mdc-fab__icon material-icons">add</span>
-</button>
+
+<div id="data_add_window">
+<!-- 	<button onclick="close_data_add_window();" class="mdc-icon-button">
+	  <div class="mdc-icon-button__ripple"></div>
+	  <span class="mdc-icon-button__focus-ring"></span>
+	  <i class="material-icons">arrow_back_ios</i>
+	</button> -->
+	<button onclick="close_data_add_window();" class="mdc-icon-button" style="
+		right: 0px;
+		position: absolute;
+	">
+	  <div class="mdc-icon-button__ripple"></div>
+	  <span class="mdc-icon-button__focus-ring"></span>
+	  <i class="material-icons">close</i>
+	</button>
+
+	<button class="mdc-fab" id="add-data-btn" aria-label="Favorite" onclick="open_data_add_window();">
+	  <div class="mdc-fab__ripple"></div>
+	  <span class="mdc-fab__icon material-icons">add</span>
+	</button>
+</div>
+
 
 <style type="text/css">
-.mdc-data-table__header-row {
-  background-color: #333; 
-  color: white; 
-}
 .mdc-data-table__header-cell{
+	background-color: #333;
 	color: white;
+}
+#data_add_window{
+	transition: 200ms;
+	position: fixed;
+	z-index: 5;
+	width: 56px;
+	height: 56px;
+	bottom: 15px;
+	right: 15px;
+	border-radius: 100%;
+	overflow: hidden;
+	background: white;
+}
+#add-data-btn{
+	transition: 200ms;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
 }
 </style>
