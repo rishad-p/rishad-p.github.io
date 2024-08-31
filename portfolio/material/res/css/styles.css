@@ -22,7 +22,7 @@ body{
     background: #00000026;
     opacity: 0%;
     transform: translateX(100vw) translateY(-100vh);
-    transition: 300ms;
+    transition: 10ms;
 }
 #menu-list{
     transform-origin: center bottom !important;

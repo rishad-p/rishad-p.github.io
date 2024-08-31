@@ -124,33 +124,21 @@ $('#more_horiz').click(function(){
     }
 });
 $("#more-vert-btn").click(() =>{
-    $("#menu-scrim").css("transition", "0ms");
     $("#menu-scrim").css("transform", "translateX(0vw) translateY(0vh)");
-    setTimeout(() =>{
-        $("#menu-scrim").css("transition", "300ms");
-        $("#menu-scrim").css("opacity", "100%");
-    }, 10);
+    $("#menu-scrim").css("opacity", "100%");
     $("#menu-list").css("width", "120px");
     $("#menu-list").css("height", "209px");
 });
 $("#menu-scrim").click(() =>{
-    $("#menu-scrim").css("transition", "300ms");
     $("#menu-scrim").css("opacity", "0%");
-    setTimeout(() =>{
-        $("#menu-scrim").css("transition", "300ms");
-        $("#menu-scrim").css("transform", "translateX(100vw) translateY(-100vh)");
-    }, 300);
+    $("#menu-scrim").css("transform", "translateX(100vw) translateY(-100vh)");
     $("#menu-list").css("width", "0px");
     $("#menu-list").css("height", "0px");
 });
 
 $("#menu-scrim").on("touchstart", () =>{
-    $("#menu-scrim").css("transition", "300ms");
     $("#menu-scrim").css("opacity", "0%");
-    setTimeout(() =>{
-        $("#menu-scrim").css("transition", "300ms");
-        $("#menu-scrim").css("transform", "translateX(100vw) translateY(-100vh)");
-    }, 300);
+    $("#menu-scrim").css("transform", "translateX(100vw) translateY(-100vh)");
     $("#menu-list").css("width", "0px");
     $("#menu-list").css("height", "0px");
 });
