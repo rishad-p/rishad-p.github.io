@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material Design Text Field</title>
+  
+  <!-- Material Components Web CSS (CDN) -->
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Text Field Component -->
+  <label class="mdc-text-field mdc-text-field--filled">
+    <span class="mdc-text-field__ripple"></span>
+    <span class="mdc-floating-label" id="my-label-id">Hint text</span>
+    <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
+    <span class="mdc-line-ripple"></span>
+  </label>
+
+  <!-- Material Components Web JS (CDN) -->
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+  <!-- Initialize Material Design Components -->
+  <script>
+    mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
+  </script>
+
+</body>
+</html>
