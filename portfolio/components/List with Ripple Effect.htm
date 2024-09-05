@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List with Ripple Effect</title>
+  
+  <!-- MDC Ripple CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+  
+  <!-- Optional: Google Icons (for material icons) -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    /* Ensure the ripple effect is visible */
+    .mdc-list-item {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div>
+  <h3 class="mdc-typography--subtitle1">Two-Line with Leading and Trailing Icon and Divider</h3>
+  <ul class="mdc-list demo-list mdc-list--two-line mdc-list--avatar-list">
+    
+    <li class="mdc-list-item" tabindex="0" id="item1">
+      <span class="mdc-list-item__graphic material-icons" aria-hidden="true">folder</span>
+      <span class="mdc-list-item__text">
+        <span class="mdc-list-item__primary-text">Dog Photos</span>
+        <span class="mdc-list-item__secondary-text">9 Jan 2018</span>
+      </span>
+      <span class="mdc-list-item__meta material-icons" aria-hidden="true">info</span>
+    </li>
+
+    <li class="mdc-list-item" tabindex="-1" id="item2">
+      <span class="mdc-list-item__graphic material-icons" aria-hidden="true">folder</span>
+      <span class="mdc-list-item__text">
+        <span class="mdc-list-item__primary-text">Cat Photos</span>
+        <span class="mdc-list-item__secondary-text">22 Dec 2017</span>
+      </span>
+      <span class="mdc-list-item__meta material-icons" aria-hidden="true">info</span>
+    </li>
+    
+    <li class="mdc-list-divider" role="separator"></li>
+    
+    <li class="mdc-list-item" tabindex="-1" id="item3">
+      <span class="mdc-list-item__graphic material-icons" aria-hidden="true">folder</span>
+      <span class="mdc-list-item__text">
+        <span class="mdc-list-item__primary-text">Potatoes</span>
+        <span class="mdc-list-item__secondary-text">30 Nov 2017</span>
+      </span>
+      <span class="mdc-list-item__meta material-icons" aria-hidden="true">info</span>
+    </li>
+
+    <li class="mdc-list-item" tabindex="-1" id="item4">
+      <span class="mdc-list-item__graphic material-icons" aria-hidden="true">folder</span>
+      <span class="mdc-list-item__text">
+        <span class="mdc-list-item__primary-text">Carrots</span>
+        <span class="mdc-list-item__secondary-text">17 Oct 2017</span>
+      </span>
+      <span class="mdc-list-item__meta material-icons" aria-hidden="true">info</span>
+    </li>
+    
+  </ul>
+</div>
+
+<!-- MDC Ripple JS -->
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<script>
+  // Initialize MDC Ripple effect
+  const listItems = document.querySelectorAll('.mdc-list-item');
+  listItems.forEach(item => {
+    mdc.ripple.MDCRipple.attachTo(item);
+  });
+</script>
+
+</body>
+</html>
