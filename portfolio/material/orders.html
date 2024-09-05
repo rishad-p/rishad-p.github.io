@@ -1,49 +1,109 @@
 <br>
-<text class="mdc-typography--headline2">Data list</text>
-<br>
-<text>demo</text>
+<text style="font-size: 50px;font-weight: 100;">Data list</text>
 <br>
 <div class="mdc-data-table" style="width: 100%;">
   <div class="mdc-data-table__table-container">
     <table class="mdc-data-table__table" aria-label="Dessert calories">
       <thead>
         <tr class="mdc-data-table__header-row">
-          <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Dessert</th>
-          <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Carbs (g)</th>
-          <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Protein (g)</th>
-          <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Comments</th>
+          <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Name</th>
+          <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Age</th>
+          <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Note</th>
         </tr>
       </thead>
-      <tbody class="mdc-data-table__content">
+      <tbody class="mdc-data-table__content" style="text-align: left;">
         <tr class="mdc-data-table__row">
-          <th class="mdc-data-table__cell" scope="row">Frozen yogurt</th>
+          <th class="mdc-data-table__cell mdc-data-table__cell--left" scope="row">Frozen yogurt</th>
           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">24</td>
           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">4.0</td>
-          <td class="mdc-data-table__cell">Super tasty</td>
         </tr>
         <tr class="mdc-data-table__row">
-          <th class="mdc-data-table__cell" scope="row">Ice cream sandwich</th>
+          <th class="mdc-data-table__cell mdc-data-table__cell--left" scope="row">Ice cream sandwich</th>
           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">37</td>
           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">4.33333333333</td>
-          <td class="mdc-data-table__cell">I like ice cream more</td>
         </tr>
         <tr class="mdc-data-table__row">
-          <th class="mdc-data-table__cell" scope="row">Eclair</th>
+          <th class="mdc-data-table__cell mdc-data-table__cell--left" scope="row">Eclair</th>
           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">24</td>
           <td class="mdc-data-table__cell mdc-data-table__cell--numeric">6.0</td>
-          <td class="mdc-data-table__cell">New filing flavor</td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 <br>
+
+<ul class="mdc-deprecated-list mdc-deprecated-list--two-line">
+  <li class="mdc-deprecated-list-item" tabindex="0">
+    <span class="mdc-deprecated-list-item__ripple"></span>
+    <span class="mdc-deprecated-list-item__text">
+      <span class="mdc-deprecated-list-item__primary-text">Two-line item</span>
+      <span class="mdc-deprecated-list-item__secondary-text">Secondary text</span>
+    </span>
+  </li>
+  <li class="mdc-deprecated-list-item">
+    <span class="mdc-deprecated-list-item__ripple"></span>
+    <span class="mdc-deprecated-list-item__text">
+      <span class="mdc-deprecated-list-item__primary-text">Two-line item</span>
+      <span class="mdc-deprecated-list-item__secondary-text">Secondary text</span>
+    </span>
+  </li>
+  <li class="mdc-deprecated-list-item">
+    <span class="mdc-deprecated-list-item__ripple"></span>
+    <span class="mdc-deprecated-list-item__text">
+      <span class="mdc-deprecated-list-item__primary-text">Two-line item</span>
+      <span class="mdc-deprecated-list-item__secondary-text">Secondary text</span>
+    </span>
+  </li>
+</ul>
+
+<ul class="mdc-list demo-list mdc-list--two-line mdc-list--avatar-list">
+	<li class="mdc-list-item mdc-ripple-upgraded" tabindex="0" id="11daea9c-751c-48a9-8784-3f69e5339b68">
+	  <span class="mdc-list-item__graphic material-icons" aria-hidden="true">folder</span>
+	  <span class="mdc-list-item__text">
+	    <span class="mdc-list-item__primary-text">Dog Photos</span>
+	    <span class="mdc-list-item__secondary-text">9 Jan 2018</span>
+	  </span>
+	  <span class="mdc-list-item__meta material-icons" aria-hidden="true">info</span>
+	</li>
+
+	<li class="mdc-list-item mdc-ripple-upgraded" tabindex="-1" id="c82beb69-eef3-4a67-824e-8b971fcaa714">
+	  <span class="mdc-list-item__graphic material-icons" aria-hidden="true">folder</span>
+	  <span class="mdc-list-item__text">
+	    <span class="mdc-list-item__primary-text">Cat Photos</span>
+	    <span class="mdc-list-item__secondary-text">22 Dec 2017</span>
+	  </span>
+	  <span class="mdc-list-item__meta material-icons" aria-hidden="true">info</span>
+	</li>
+
+	<li class="mdc-list-divider" role="separator"></li>
+
+	<li class="mdc-list-item mdc-ripple-upgraded" tabindex="-1" id="ecbd743d-680a-40d2-adb9-76d881788763">
+	  <span class="mdc-list-item__graphic material-icons" aria-hidden="true">folder</span>
+	  <span class="mdc-list-item__text">
+	    <span class="mdc-list-item__primary-text">Potatoes</span>
+	    <span class="mdc-list-item__secondary-text">30 Nov 2017</span>
+	  </span>
+	  <span class="mdc-list-item__meta material-icons" aria-hidden="true">info</span>
+	</li>
+
+	<li class="mdc-list-item mdc-ripple-upgraded" tabindex="-1" id="d436a5db-0f0a-458f-9b55-1b59a44b1df8">
+	  <span class="mdc-list-item__graphic material-icons" aria-hidden="true">folder</span>
+	  <span class="mdc-list-item__text">
+	    <span class="mdc-list-item__primary-text">Carrots</span>
+	    <span class="mdc-list-item__secondary-text">17 Oct 2017</span>
+	  </span>
+	  <span class="mdc-list-item__meta material-icons" aria-hidden="true">info</span>
+	</li>
+</ul>
+
+
 <div data="fab-impact-fixer" style="
 	height: 100px;
 "></div>
 
 <div id="data_add_window">
-    <div class="mdc-top-app-bar__row">
+    <div class="mdc-top-app-bar__row" style="box-shadow: 0px 0px 10px -2.4px #00000040;z-index: inherit;background: white;">
         <section id="mdc-top-app-bar__section--align-start-add-data" style="transition: 500ms;">
 			<button onclick="open_data_add_window();" id="add-data-btn" class="mdc-fab">
 			  <div class="mdc-icon-button__ripple"></div>
@@ -52,13 +112,87 @@
 			</button>
             <span id="title" class="mdc-top-app-bar__title" style="text-transform: capitalize;">Create data</span>
         </section>
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" style="overflow: hidden;">
+			<button onclick="" id="" class="mdc-icon-button">
+			  <div class="mdc-icon-button__ripple"></div>
+			  <span class="mdc-icon-button__focus-ring"></span>
+			  <i class="material-icons" id="add-back-icon">save</i>
+			</button>
 			<button onclick="close_data_add_window();" id="close-add-data-btn" class="mdc-icon-button">
 			  <div class="mdc-icon-button__ripple"></div>
 			  <span class="mdc-icon-button__focus-ring"></span>
 			  <i class="material-icons" id="add-back-icon">close</i>
 			</button>
         </section>
+    </div>
+    <div style="
+    	display: flex;
+    	flex-direction: row;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0px;
+    	" class="add-data-container">
+    	<div style="width: 100%;" class="add-data-container-left"></div>
+    	<div class="add-data-container-right" style="
+    		padding:16px;
+		    width: 100%;
+		    display: flex;
+		    flex-direction: column;
+		    overflow: scroll;
+    	">
+    		<div class="mdc-top-app-bar--fixed-adjust"></div>
+			<label class="mdc-text-field mdc-text-field--filled demo-text-field-shaped">
+				<span class="mdc-text-field__ripple"></span>
+				<span class="mdc-floating-label">Name</span>
+				<input class="mdc-text-field__input" type="text" id="name" onkeyup="submit_state()">
+				<span class="mdc-line-ripple"></span>
+			</label>
+			<br>
+			<div class="mdc-text-field mdc-text-field--outlined demo-text-field-outlined-shaped">
+			  <input class="mdc-text-field__input" id="age" onkeyup="submit_state()">
+			  <div class="mdc-notched-outline">
+			    <div class="mdc-notched-outline__leading"></div>
+			    <div class="mdc-notched-outline__notch">
+			      <label for="text-field-hero-input" class="mdc-floating-label">Age</label>
+			    </div>
+			    <div class="mdc-notched-outline__trailing"></div>
+			  </div>
+			</div>
+			<br>
+			<label class="mdc-text-field mdc-text-field--outlined mdc-text-field--textarea mdc-text-field--with-internal-counter">
+			  <span class="mdc-notched-outline">
+			    <span class="mdc-notched-outline__leading"></span>
+			    <span class="mdc-notched-outline__notch">
+			      <span class="mdc-floating-label" id="my-label-id">Note</span>
+			    </span>
+			    <span class="mdc-notched-outline__trailing"></span>
+			  </span>
+			  <span class="mdc-text-field__resizer">
+			    <textarea class="mdc-text-field__input" id="note" rows="4" maxlength="140" onkeyup="submit_state()"></textarea>
+			    <span class="mdc-text-field-character-counter">0 / 140</span>
+			  </span>
+			</label>
+			<br>
+			<div class="data-add-submit-area" style="
+				display: flex;
+				position: absolute;
+				bottom: 16px;
+				right: 16px;
+				">
+				<button class="mdc-button mdc-button--outlined demo-button-shaped" id="clr-btn" onclick="clear_create_data();">
+					<span class="mdc-button__ripple"></span>
+					<span class="mdc-button__focus-ring"></span>
+					<span class="mdc-button__label">Clear</span>
+				</button>
+				<button class="mdc-button mdc-button--raised demo-button-shaped" style="margin-left: 8px;" id="submit-btn">
+					<span class="mdc-button__ripple"></span>
+					<span class="mdc-button__focus-ring"></span>
+					<span class="mdc-button__label">Submit</span>
+				</button>
+			</div>
+
+    	</div>
     </div>
 
 </div>
@@ -89,4 +223,59 @@
     box-shadow: none;
     flex: none;
 }
+#note{
+	width: 251px;
+}
+.mdc-button {
+    /*font-size: 18px; */
+    padding: 12px 24px; /* Increase padding */
+}
+@media only screen and (min-width:300px) {
+	/* For mobile: */
+	.add-data-container-left{
+		display: none;
+	}
+	.add-data-container-right{
+		align-items:unset;
+	}
+}
+@media only screen and (min-width: 768px) {
+	/* For desktop: */
+	.add-data-container-left{
+		display: block;
+	}
+	.add-data-container-right{
+		align-items:center;
+	}
+}
 </style>
+
+<script>
+function submit_state(){
+    var name = $("#name").val().trim();
+    var age = $("#age").val().trim();
+    var note = $("#note").val().trim();
+    if (name === "" || age === "" || note === "") {
+    	$("#clr-btn").attr("disabled", "disabled");
+    	$("#submit-btn").attr("disabled", "disabled");
+    }
+    else{
+		$("#clr-btn").removeAttr("disabled");
+		$("#submit-btn").removeAttr("disabled");
+    }
+}
+function clear_create_data(){
+	$("#name").val(null);
+	$("#age").val(null);
+	$("#note").val(null);
+	submit_state();
+}
+var mdctextFields = document.querySelectorAll('.mdc-text-field');
+mdctextFields.forEach(field => {
+    mdc.textField.MDCTextField.attachTo(field);
+});
+var buttons = document.querySelectorAll('.mdc-button');
+buttons.forEach(button => {
+    mdc.ripple.MDCRipple.attachTo(button);
+});
+</script>
