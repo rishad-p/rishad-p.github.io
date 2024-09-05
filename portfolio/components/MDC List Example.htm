@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MDC List Example</title>
+  
+  <!-- Material Components Web CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/14.0.0/material-components-web.min.css">
+  
+  <!-- Material Icons (Optional for icons) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  <style>
+    .mdc-deprecated-list {
+      max-width: 360px;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  
+  <ul class="mdc-deprecated-list mdc-deprecated-list--two-line">
+    <li class="mdc-deprecated-list-item" tabindex="0">
+      <span class="mdc-deprecated-list-item__ripple"></span>
+      <span class="mdc-deprecated-list-item__text">
+        <span class="mdc-deprecated-list-item__primary-text">First item</span>
+        <span class="mdc-deprecated-list-item__secondary-text">Secondary text</span>
+      </span>
+    </li>
+    <li class="mdc-deprecated-list-item">
+      <span class="mdc-deprecated-list-item__ripple"></span>
+      <span class="mdc-deprecated-list-item__text">
+        <span class="mdc-deprecated-list-item__primary-text">Second item</span>
+        <span class="mdc-deprecated-list-item__secondary-text">Secondary text</span>
+      </span>
+    </li>
+    <li class="mdc-deprecated-list-item">
+      <span class="mdc-deprecated-list-item__ripple"></span>
+      <span class="mdc-deprecated-list-item__text">
+        <span class="mdc-deprecated-list-item__primary-text">Third item</span>
+        <span class="mdc-deprecated-list-item__secondary-text">Secondary text</span>
+      </span>
+    </li>
+  </ul>
+
+  <!-- Material Components Web JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/14.0.0/material-components-web.min.js"></script>
+  
+  <script>
+    // Initialize MDC List
+    const list = new mdc.list.MDCList(document.querySelector('.mdc-deprecated-list'));
+    list.singleSelection = true;
+  </script>
+</body>
+</html>
