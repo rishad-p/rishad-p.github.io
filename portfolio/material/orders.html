@@ -33,32 +33,9 @@
 </div>
 <br>
 
-<ul class="mdc-deprecated-list mdc-deprecated-list--two-line">
-  <li class="mdc-deprecated-list-item" tabindex="0">
-    <span class="mdc-deprecated-list-item__ripple"></span>
-    <span class="mdc-deprecated-list-item__text">
-      <span class="mdc-deprecated-list-item__primary-text">Two-line item</span>
-      <span class="mdc-deprecated-list-item__secondary-text">Secondary text</span>
-    </span>
-  </li>
-  <li class="mdc-deprecated-list-item">
-    <span class="mdc-deprecated-list-item__ripple"></span>
-    <span class="mdc-deprecated-list-item__text">
-      <span class="mdc-deprecated-list-item__primary-text">Two-line item</span>
-      <span class="mdc-deprecated-list-item__secondary-text">Secondary text</span>
-    </span>
-  </li>
-  <li class="mdc-deprecated-list-item">
-    <span class="mdc-deprecated-list-item__ripple"></span>
-    <span class="mdc-deprecated-list-item__text">
-      <span class="mdc-deprecated-list-item__primary-text">Two-line item</span>
-      <span class="mdc-deprecated-list-item__secondary-text">Secondary text</span>
-    </span>
-  </li>
-</ul>
-
 <ul class="mdc-list demo-list mdc-list--two-line mdc-list--avatar-list">
-	<li class="mdc-list-item mdc-ripple-upgraded" tabindex="0" id="11daea9c-751c-48a9-8784-3f69e5339b68">
+	<li class="mdc-list-item mdc-ripple-upgraded mdc-ripple" tabindex="0" id="11daea9c-751c-48a9-8784-3f69e5339b68">
+	  <span class="mdc-deprecated-list-item__ripple mdc-ripple"></span>
 	  <span class="mdc-list-item__graphic material-icons" aria-hidden="true">folder</span>
 	  <span class="mdc-list-item__text">
 	    <span class="mdc-list-item__primary-text">Dog Photos</span>
@@ -67,7 +44,8 @@
 	  <span class="mdc-list-item__meta material-icons" aria-hidden="true">info</span>
 	</li>
 
-	<li class="mdc-list-item mdc-ripple-upgraded" tabindex="-1" id="c82beb69-eef3-4a67-824e-8b971fcaa714">
+	<li class="mdc-list-item mdc-ripple-upgraded mdc-ripple" tabindex="-1" id="c82beb69-eef3-4a67-824e-8b971fcaa714">
+	  <span class="mdc-list-item__ripple mdc-ripple"></span>
 	  <span class="mdc-list-item__graphic material-icons" aria-hidden="true">folder</span>
 	  <span class="mdc-list-item__text">
 	    <span class="mdc-list-item__primary-text">Cat Photos</span>
@@ -180,12 +158,12 @@
 				bottom: 16px;
 				right: 16px;
 				">
-				<button class="mdc-button mdc-button--outlined demo-button-shaped" id="clr-btn" onclick="clear_create_data();">
+				<button class="mdc-button mdc-button--outlined demo-button-shaped" id="clr-btn" onclick="clear_create_data();" disabled>
 					<span class="mdc-button__ripple"></span>
 					<span class="mdc-button__focus-ring"></span>
 					<span class="mdc-button__label">Clear</span>
 				</button>
-				<button class="mdc-button mdc-button--raised demo-button-shaped" style="margin-left: 8px;" id="submit-btn">
+				<button class="mdc-button mdc-button--raised demo-button-shaped" style="margin-left: 8px;" id="submit-btn" disabled>
 					<span class="mdc-button__ripple"></span>
 					<span class="mdc-button__focus-ring"></span>
 					<span class="mdc-button__label">Submit</span>
@@ -255,7 +233,7 @@ function submit_state(){
     var name = $("#name").val().trim();
     var age = $("#age").val().trim();
     var note = $("#note").val().trim();
-    if (name === "" || age === "" || note === "") {
+    if (name === "" || age === "") {
     	$("#clr-btn").attr("disabled", "disabled");
     	$("#submit-btn").attr("disabled", "disabled");
     }
@@ -278,4 +256,8 @@ var buttons = document.querySelectorAll('.mdc-button');
 buttons.forEach(button => {
     mdc.ripple.MDCRipple.attachTo(button);
 });
+// var listItems = document.querySelectorAll('.mdc-list-item');
+// listItems.forEach(item => {
+// 	mdc.ripple.MDCRipple.attachTo(item);
+// });
 </script>
