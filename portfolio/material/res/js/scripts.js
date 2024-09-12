@@ -82,6 +82,14 @@ $('li').click(function(){
             $("title").html("Material | "+thi);
             $('#title').html(thi);
         }
+
+        if (thi === 'orders') {
+            $("#data_add_window").css("display", "block");
+        }
+        else {
+            $("#data_add_window").css("display", "none");
+        }
+
         $(".drawer-main-content").empty();
         $(".drawer-main-content").append(respons);
         $(".drawer-main-content").css('opacity','100%');
