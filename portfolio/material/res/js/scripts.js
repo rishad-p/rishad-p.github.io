@@ -154,10 +154,10 @@ $("#menu-scrim").on("touchstart", () =>{
 function open_data_add_window(){
     $("#data_add_window").css("height", "100vh");
     $("#data_add_window").css("width", "100vw");
-    $("#data_add_window").css("top", "0px");
-    $("#data_add_window").css("left", "0px");
-    $("#data_add_window").css("margin-left", "unset");
-    $("#data_add_window").css("margin-top", "unset");
+    $("#data_add_window").css("bottom", "0px");
+    $("#data_add_window").css("right", "0px");
+    // $("#data_add_window").css("margin-left", "unset");
+    // $("#data_add_window").css("margin-top", "unset");
     $("#data_add_window").css("border-radius", "0px");
     $("#add-data-btn").attr("onclick", "close_data_add_window();");
     $("#add-data-btn").attr("class", "mdc-icon-button");
@@ -168,10 +168,10 @@ function open_data_add_window(){
 function close_data_add_window(){
     $("#data_add_window").css("height", "56px");
     $("#data_add_window").css("width", "56px");
-    $("#data_add_window").css("top", "100vh");
-    $("#data_add_window").css("left", "100vw");
-    $("#data_add_window").css("margin-left", "-71px");
-    $("#data_add_window").css("margin-top", "-71px");
+    $("#data_add_window").css("bottom", "16px");
+    $("#data_add_window").css("right", "16px");
+    // $("#data_add_window").css("margin-left", "-71px");
+    // $("#data_add_window").css("margin-top", "-71px");
     $("#data_add_window").css("border-radius", "100px");
     $("#add-data-btn").attr("onclick", "open_data_add_window();");
     $("#add-data-btn").attr("class", "mdc-fab");
