@@ -153,7 +153,7 @@ function open_data_add_window(){
     $("#data_add_window").css("border-radius", "0px");
     $("#add-data-btn").attr("onclick", "close_data_add_window();");
     $("#add-data-btn").attr("class", "mdc-icon-button");
-    $("#add-back-icon").html("arrow_back_ios");
+    $("#add-back-icon").html("arrow_back");
     $("#mdc-top-app-bar__section--align-start-add-data").attr("class", "mdc-top-app-bar__section mdc-top-app-bar__section--align-start");
 }
 

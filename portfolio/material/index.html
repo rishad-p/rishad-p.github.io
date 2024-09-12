@@ -163,7 +163,7 @@
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script>
         // Initialize the ripple effect on all list items
-        const listItems = document.querySelectorAll('.mdc-list-item');
+        var listItems = document.querySelectorAll('.mdc-list-item');
         listItems.forEach(item => {
             mdc.ripple.MDCRipple.attachTo(item);
         });
