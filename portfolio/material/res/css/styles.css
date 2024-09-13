@@ -71,7 +71,7 @@ body{
     width:100vw;
     height:100vh;
     background-color:white;
-    background-image: url('https://rishad.dev/apps/ec/res/img/favicon.png');
+    /*background-image: url('https://rishad.dev/apps/ec/res/img/favicon.png');*/
     background-repeat: no-repeat;
     background-size:40%;
     background-position: center center;
@@ -98,3 +98,63 @@ hr{
     height:0.5px;
     opacity:50%;
 }
+
+/*---- orders page section -------*/
+
+.mdc-data-table__header-cell{
+    background-color: #333;
+    color: white;
+}
+#data_add_window{
+    transition: 500ms;
+    position: fixed;
+    z-index: 5;
+    width: 56px;
+    height: 56px;
+    bottom: 16px;
+    right: 16px;
+    /*margin-left: -71px;*/
+    /*margin-top: -71px;*/
+    border-radius: 100px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+}
+#add-data-btn{
+    transition: 500ms;
+    box-shadow: none;
+    flex: none;
+}
+#note{
+    width: 251px;
+}
+.list-key{
+    transition: 500ms;
+}
+.mdc-button {
+    /*font-size: 18px; */
+    padding: 12px 24px; /* Increase padding */
+}
+@media only screen and (min-width:300px) {
+    /* For mobile: */
+    .add-data-container-left{
+        display: none;
+    }
+    .add-data-container-right{
+        align-items:unset;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .add-data-container-left{
+        display: block;
+    }
+    .add-data-container-right{
+        align-items:center;
+    }
+}
+.list-details{
+    transition: 300ms;
+    height: 0px;
+}
+/*---- end orders page section -------*/

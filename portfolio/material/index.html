@@ -5,9 +5,9 @@
     <meta name="description" content="Material">
     <meta property="og:title" content="Material" />
     <meta property="og:description" content="Material drawer">
-    <meta property="og:image" content="https://rishad.dev/apps/ec/res/img/favicon.png" />
+    <meta property="og:image" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="icon" sizes="192x192" href="https://rishad.dev/apps/ec/res/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="res/css/styles.css">
     <link rel="stylesheet" href="res/css/material.css">
@@ -112,7 +112,7 @@
 </aside>
 
 <div class="drawer-frame-app-content" style="width: 100%;">
-    <header class="mdc-top-app-bar drawer-top-app-bar" style="width:100vw;position:fixed;">
+    <header class="mdc-top-app-bar drawer-top-app-bar" style="width:100vw;position:fixed;box-shadow: 0px 0px 10px -2.4px #00000040;">
         <div class="mdc-top-app-bar__row">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
                 <button id="menuEl" class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" style="--mdc-ripple-fg-size:28px; --mdc-ripple-fg-scale:1.71429; --mdc-ripple-left:10px; --mdc-ripple-top:10px;">
@@ -231,6 +231,10 @@
               </span>
             </label>
             <br>
+            <div data="fab-impact-fixer" style="
+                height: 100px;
+            "></div>
+            <br>
             <div class="data-add-submit-area" style="
                 display: flex;
                 position: absolute;
@@ -242,7 +246,7 @@
                     <span class="mdc-button__focus-ring"></span>
                     <span class="mdc-button__label">Clear</span>
                 </button>
-                <button class="mdc-button mdc-button--raised demo-button-shaped" style="margin-left: 8px;" id="submit-btn" disabled>
+                <button class="mdc-button mdc-button--raised demo-button-shaped" style="margin-left: 8px;" id="submit-btn" onclick="add_data();" disabled>
                     <span class="mdc-button__ripple"></span>
                     <span class="mdc-button__focus-ring"></span>
                     <span class="mdc-button__label">Submit</span>
@@ -251,7 +255,9 @@
         </div>
     </div>
 </div>
-
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="res/js/firebase-config.js"></script>
     <script src="res/js/scripts.js"></script>
 
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
