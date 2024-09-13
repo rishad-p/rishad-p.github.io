@@ -128,9 +128,6 @@ hr{
 #note{
     width: 251px;
 }
-.list-key{
-    transition: 500ms;
-}
 .mdc-button {
     /*font-size: 18px; */
     padding: 12px 24px; /* Increase padding */
@@ -156,5 +153,15 @@ hr{
 .list-details{
     transition: 300ms;
     height: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+.list-key{
+    transition: 500ms;
+    overflow: hidden;
+    width: 100%;
 }
 /*---- end orders page section -------*/

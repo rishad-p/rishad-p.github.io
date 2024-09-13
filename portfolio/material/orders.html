@@ -171,9 +171,11 @@ function close_data_add_window(){
 function expand_toggle(id){
     if($("#"+id).attr('data') === 'off'){
         $(".list-details").css("height", "0px");
+        $(".list-key").css("height", "unset");
         $(".list-details").attr("data", "off");
         $("#"+id).attr('data', 'on');
         $("#"+id).css("height", "70px");
+        $("."+id).css("height", "143px");
     }
     else if($("#"+id).attr('data') === 'on'){
         $("#"+id).attr('data', 'off');
@@ -231,13 +233,26 @@ function list_data(){
 
 	            var listItem = document.createElement('div');
 	            $(listItem).attr("class", "list-key "+childSnapshot.key)
-	            $(listItem).html("<div class='mdc-list-item mdc-ripple-upgraded mdc-ripple' tabindex='0' data='off' onclick='expand_toggle(\"" + key + "\");'><span class='mdc-deprecated-list-item__ripple mdc-ripple'></span><span class='mdc-list-item__graphic material-icons' aria-hidden='true'>folder</span><span class='mdc-list-item__text'><span class'mdc-list-item__primary-text'>"+data.text+"</span><span class='mdc-list-item__secondary-text'>123</span></span><span class='mdc-list-item__meta material-icons' aria-hidden='true'>info</span></div><div data='off' id='"+key+"' class='list-details'></div><li class='mdc-list-divider' role='separator'></li>");
+	            $(listItem).html(
+	            	"<div class='mdc-list-item mdc-ripple-upgraded mdc-ripple' tabindex='0' data='off' onclick='expand_toggle(\"" + key + "\");'>"+
+	            		"<span class='mdc-deprecated-list-item__ripple mdc-ripple'></span>"+
+	            		"<span class='mdc-list-item__graphic material-icons' aria-hidden='true'>folder</span>"+
+	            		"<span class='mdc-list-item__text'>"+
+	            			"<span class'mdc-list-item__primary-text'>"+data.text+"</span>"+
+	            			"<span class='mdc-list-item__secondary-text'>123</span>"+
+	            		"</span>"+
+	            		"<span class='mdc-list-item__meta material-icons' aria-hidden='true'>info</span>"+
+	            	"</div>"+
+	            	"<div data='off' id='"+key+"' class='list-details'>"+
+						"<button class='mdc-icon-button' onclick='delete_data(\"" + key + "\")'>"+
+							"<div class='mdc-icon-button__ripple'></div>"+
+							"<span class='mdc-icon-button__focus-ring'></span>"+
+							"<i class='material-icons'>delete</i>"+
+						"</button>"+
+	            	"</div>"+
+	            	"<li class='mdc-list-divider' role='separator'></li>"
+	            );
 	            dataList.appendChild(listItem);
-	            
-		        // if (key === lastKey) {
-		        //     listItem.style.backgroundColor = 'lightblue';
-		        //     console.log(lastKey);
-		        // }
 				var listItems = document.querySelectorAll('.mdc-list-item');
 				listItems.forEach(item => {
 					mdc.ripple.MDCRipple.attachTo(item);
@@ -248,7 +263,16 @@ function list_data(){
         $('#prog').css('width','0vw');
     });
 }
-
+function delete_data(key) {
+	alert("Confirm Delete");
+	$("."+key).css("width", "0%");
+	setTimeout(()=>{
+		$("."+key).css("height", "0%");
+		setTimeout(()=>{
+			database.ref('items').child(key).remove();
+		},300);
+	},300);
+}
 function submit_state(){
     var name = $("#name").val().trim();
     var age = $("#age").val().trim();
