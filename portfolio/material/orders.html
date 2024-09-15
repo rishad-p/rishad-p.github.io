@@ -264,14 +264,15 @@ function list_data(){
     });
 }
 function delete_data(key) {
-	alert("Confirm Delete");
-	$("."+key).css("width", "0%");
-	setTimeout(()=>{
-		$("."+key).css("height", "0%");
+	if (confirm("Confirm Delete")) {
+		$("."+key).css("width", "0%");
 		setTimeout(()=>{
-			database.ref('items').child(key).remove();
+			$("."+key).css("height", "0%");
+			setTimeout(()=>{
+				database.ref('items').child(key).remove();
+			},300);
 		},300);
-	},300);
+	}
 }
 function submit_state(){
     var name = $("#name").val().trim();
