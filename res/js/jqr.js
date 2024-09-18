@@ -68,9 +68,10 @@ function tog(){
 	    $(".c-3").css('transition','900ms');
 	    $(".d-4").css('transition','600ms');
 	    $(".e-5").css('transition','300ms');
-	    $(".divs").css('margin','30px');
+	    $(".divs").css('margin','30px 30px');
 	    $(".divs").css('width','300px');
-	    $(".divs").css('font-size','50px');
+	    $(".divs").css('height','59px');
+	    // $(".divs").css('font-size','50px');
 	    $(".divs").css('color','#ffff96');
 	    $(".divs").css('background-color','#00000080');
 	}
@@ -94,9 +95,10 @@ function tog(){
 	    $(".c-3").css('transition','900ms');
 	    $(".d-4").css('transition','1200ms');
 	    $(".e-5").css('transition','1500ms');
-	    $(".divs").css('margin','0px');
+	    $(".divs").css('margin','0px 0px');
 	    $(".divs").css('width','0px');
-	    $(".divs").css('font-size','0px');
+	    $(".divs").css('height','0px');
+	    // $(".divs").css('font-size','0px');
 	    $(".divs").css('color','yellow');
 	    $(".divs").css('background-color','transparent');
 	}

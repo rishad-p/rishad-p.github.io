@@ -103,12 +103,14 @@ body{
     transition:500ms;
     transform-origin:0% 50%;
     width: 0px;
-    font-size:0px;
+    height: 0px;
+    font-size:50px;
     overflow:hidden;
+    white-space: nowrap;
     background-color:transparent;
     color:yellow;
     border-radius:20px;
-    margin:0px;
+    margin:0px 0px;
     background-color:#00000080;
     box-shadow:0px 0px 0px 0px #00000080;
 }
