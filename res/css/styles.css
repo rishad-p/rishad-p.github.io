@@ -83,11 +83,11 @@ body{
 #listsbg{
     transition:500ms;
 }
-#listsbg:hover{
+/*#listsbg:hover{
     transition:500ms;
     padding-left:50px;
     padding-top:20px;
-}
+}*/
 .divs:hover{
     transition:500ms !important;
     background-color:transparent !important;
