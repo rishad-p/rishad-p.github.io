@@ -120,6 +120,33 @@ function link(thi){
     });
 }
 
+
+let isLongPress = false;
+let touchStartTimer;
+
+// When the user starts touching the element
+function handleTouchStart(event) {
+  touchStartTimer = setTimeout(() => {
+    isLongPress = true;
+  }, 750); // Adjust the delay as needed (in milliseconds)
+}
+
+// When the user stops touching or moves their finger
+function handleTouchEnd(event) {
+  clearTimeout(touchStartTimer);
+  if (isLongPress) {
+    event.preventDefault(); // Prevent default text selection
+  }
+  isLongPress = false;
+}
+
+// Add event listeners to the element you want to protect
+const element = document.getElementById('body');
+element.addEventListener('touchstart', handleTouchStart);
+element.addEventListener('touchend', handleTouchEnd);
+element.addEventListener('touchmove', handleTouchEnd); // Add this for touchmove to prevent accidental selection
+
+
 // var prevScrollpos = window.pageYOffset;
 // window.onscroll=function(){
 //   var currentScrollPos=window.pageYOffset;
