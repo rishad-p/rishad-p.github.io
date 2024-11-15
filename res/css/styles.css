@@ -10,6 +10,7 @@ body{
     transition:500ms;
     margin:0px;
     user-select:none;
+    -webkit-user-select: none;
     touch-action:manipulation;
     overflow-X:hidden;
     color:auto;
