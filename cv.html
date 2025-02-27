@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>rishad</title>
+  <title>Rishad P</title>
   <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
   <script type="text/javascript" src="res/js/jqr.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 <style>
 body {
   margin: 0;
@@ -199,23 +201,23 @@ table.skill td{
                 <td colspan="2"><h5 style="margin:unset;">EXPERIENCE</h5></td>
               </tr>
               <tr>
+                <td style="white-space:nowrap;vertical-align:top;">2024</td>
+                <td style="vertical-align: top;">&bull;</td>
+                <td>Back-end developer @ Crudx technologies (Fixail) Calicut</td>
+              </tr>
+              <tr>
                 <td style="white-space:nowrap;vertical-align:top;">2022-23</td>
-                <td style="vertical-align: top;">•</td>
-                <td>work as remote for Firmtech startup</td>
+                <td style="vertical-align: top;">&bull;</td>
+                <td>contributed tech startups as coder</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap;vertical-align:top;">2021</td>
-                <td style="vertical-align: top;">•</td>
-                <td>taking small website works as self employed</td>
+                <td style="vertical-align: top;">&bull;</td>
+                <td>Joined as part-timer DA @ Amazon,(in pandemic)</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap;vertical-align:top;">2020</td>
-                <td style="vertical-align: top;">•</td>
-                <td>part time Amazon Delivery agent [Covid season]</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap;vertical-align:top;">2019-20</td>
-                <td style="vertical-align: top;">•</td>
+                <td style="vertical-align: top;">&bull;</td>
                 <td>Web Applications developer @ SAVENTURE LLP Calicut</td>
               </tr>
               <tr>
@@ -224,7 +226,7 @@ table.skill td{
               </tr>
               <tr>
                 <td style="vertical-align: top;">2019</td>
-                <td style="vertical-align: top;">•</td>
+                <td style="vertical-align: top;">&bull;</td>
                 <td>PHP training with CodeIgniter @ Technoesis IT solutions, Calicut</td>
               </tr>
               <tr>
@@ -233,17 +235,17 @@ table.skill td{
               </tr>
               <tr>
                 <td style="vertical-align: top;">2016-19</td>
-                <td style="vertical-align:top;">•</td>
+                <td style="vertical-align:top;">&bull;</td>
                 <td>Diploma in Computer Engineering @ GPTC Meppadi</td>
               </tr>
               <tr>
                 <td>2014-16</td>
-                <td>•</td>
+                <td>&bull;</td>
                 <td>+2 Computer commerce @ GHSS Meppadi</td>
               </tr>
               <tr>
                 <td>2013-14</td>
-                <td>•</td>
+                <td>&bull;</td>
                 <td>SSLC @ NHS Thariode</td>
               </tr>
               <tr>
@@ -252,7 +254,7 @@ table.skill td{
               </tr>
               <tr>
                 <td>1997</td>
-                <td>•</td>
+                <td>&bull;</td>
                 <td>DOB 10|05|1997</td>
               </tr>
             </table>
@@ -261,22 +263,22 @@ table.skill td{
             <hr/>
             <table class="skill">
               <tr>
-                <td style="border-top-left-radius:10px;">code</td>
-                <td style="border-top-right-radius:10px;">html, css, js, php, MySql</td>
+                <td style="border-top-left-radius:10px;">front-end</td>
+                <td style="border-top-right-radius:10px;">html, css, js (Bootsrap, Material, jQuery)</td>
               </tr>
               <tr>
-                <td>frameworks</td>
-                <td>Bootsrap, Material, Ajax jQuery, CodeIgniter</td>
+                <td>back-end</td>
+                <td>php, node-js, MySql, (Laravel express)</td>
               </tr>
               <tr>
                 <td style="border-bottom-left-radius:10px;white-space:nowrap;">in-learning</td>
-                <td style="border-bottom-right-radius:10px;">Git, node, react, aws</td>
+                <td style="border-bottom-right-radius:10px;">react-js, aws, firebase</td>
               </tr>
             </table>
 
             <h4 style="margin-bottom:unset;font-family:'Sofia';">Repositories</h4>
             <hr/>
-            <a href="https://github.com/rishadpulikkodan" target="_blank" style="
+            <a href="https://github.com/rishad-p" target="_blank" style="
               display: flex;
               margin: auto;
               width: fit-content;
@@ -296,7 +298,7 @@ table.skill td{
                 color: black;
                 font-weight: bold;
               ">
-                github.com/rishadpulikkodan
+                github.com/rishad-p
               </div>
             </a>
 
@@ -321,7 +323,7 @@ table.skill td{
                   <td style="width:11%"></td>
                   <td style="width:100%;padding-top: 11px;">
                     <h5 style="color:rgb(75,75,75);margin:unset;">Place : Kalpetta<br><br>
-                    Date : 30:01:2024</h5>
+                    <text id="date">Date : 30:01:2024</text></h5>
                   </td>
                   <td>
                     <h4 style="color:rgb(75,75,75);margin:unset;text-align:right;white-space:nowrap;"><br><br>RISHAD P&nbsp;</h4>
@@ -345,19 +347,9 @@ table.skill td{
               <td>Indian</td>
             </tr>
             <tr>
-              <td>Father</td>
-              <td>:</td>
-              <td>Salim P</td>
-            </tr>
-            <tr>
-              <td>Mother</td>
-              <td>:</td>
-              <td>Sulikha K</td>
-            </tr>
-            <tr>
               <td>Age</td>
               <td>:</td>
-              <td>26 Years</td>
+              <td id="age">26 Years</td>
             </tr>
             <tr>
               <td>DOB</td>
@@ -372,7 +364,7 @@ table.skill td{
             <tr>
               <td>Website</td>
               <td>:</td>
-              <td>https://rishad.dev</td>
+              <td>https://rishad-p.web.app</td>
             </tr>
             <tr>
               <td>Languages</td>
@@ -400,9 +392,9 @@ table.skill td{
 
           <b><p align="center" style="color:#005686;margin-bottom:0px;">HOBBIES</p></b>
           
-          Travel & Photography, Bike riding, music, UI Develop
+          Travel & Photography, Bike riding, music, coding
 
-          <a target="_blank" href="https://rishadpulikkodan.github.io/">
+          <a target="_blank" href="https://rishad-p.web.app/">
             <div style="
               position: absolute;
               bottom: 10px;
@@ -424,7 +416,7 @@ table.skill td{
                 box-shadow: 0px 0px 50px rgba(0,0,0,0.5);
                 margin: auto;
               "></div>
-              <div>rishadpulikkodan.github.io</div>
+              <div>rishad-p.web.app</div>
             </div>
           </a>
       	</div>
@@ -432,5 +424,17 @@ table.skill td{
     </div>
   </div>
 </div>
+<script>
+var birthYear = 1997;
+var currentYear = new Date().getFullYear();
+var age = currentYear - birthYear;
+$("#age").text(age + " Years");
+
+const date = new Date();
+const formattedDate = `Date : ${String(date.getDate()).padStart(2, '0')}:${String(date.getMonth() + 1).padStart(2, '0')}:${date.getFullYear()}`;
+$("#date").html(formattedDate);
+</script>
+<script src="https://rishad-p.web.app/js/firebase-config.js"></script>
+<script src="https://rishad-p.web.app/js/visitor.js"></script>
 </body>
 </html>
